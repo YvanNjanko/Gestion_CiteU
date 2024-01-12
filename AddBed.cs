@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FrontEnd_Gestion_CiteU
 {
-    public partial class CreateRoom : Form
+    public partial class AddBed : Form
     {
-        public CreateRoom()
+        public AddBed()
         {
             InitializeComponent();
         }

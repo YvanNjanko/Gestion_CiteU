@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FrontEnd_Gestion_CiteU
 {
-    public partial class CreateRoom : Form
+    public partial class AddResident : Form
     {
-        public CreateRoom()
+        public AddResident()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
