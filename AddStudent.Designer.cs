@@ -1,6 +1,6 @@
 ﻿namespace FrontEnd_Gestion_CiteU
 {
-    partial class AddResident
+    partial class AddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddResident));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudent));
             splitContainer1 = new SplitContainer();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -44,9 +41,6 @@
             button1 = new Button();
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
@@ -75,9 +69,6 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(label11);
-            splitContainer1.Panel2.Controls.Add(label10);
-            splitContainer1.Panel2.Controls.Add(label9);
-            splitContainer1.Panel2.Controls.Add(label8);
             splitContainer1.Panel2.Controls.Add(label7);
             splitContainer1.Panel2.Controls.Add(label6);
             splitContainer1.Panel2.Controls.Add(label5);
@@ -86,9 +77,6 @@
             splitContainer1.Panel2.Controls.Add(button1);
             splitContainer1.Panel2.Controls.Add(checkBox2);
             splitContainer1.Panel2.Controls.Add(checkBox1);
-            splitContainer1.Panel2.Controls.Add(textBox8);
-            splitContainer1.Panel2.Controls.Add(textBox7);
-            splitContainer1.Panel2.Controls.Add(textBox6);
             splitContainer1.Panel2.Controls.Add(textBox5);
             splitContainer1.Panel2.Controls.Add(textBox4);
             splitContainer1.Panel2.Controls.Add(textBox3);
@@ -123,38 +111,11 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(550, 378);
+            label11.Location = new Point(532, 151);
             label11.Name = "label11";
             label11.Size = new Size(120, 21);
             label11.TabIndex = 22;
             label11.Text = "Handicape ?";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(450, 302);
-            label10.Name = "label10";
-            label10.Size = new Size(165, 21);
-            label10.TabIndex = 21;
-            label10.Text = "Nbre mois location";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(450, 227);
-            label9.Name = "label9";
-            label9.Size = new Size(142, 21);
-            label9.TabIndex = 20;
-            label9.Text = "Code Chambre";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(450, 155);
-            label8.Name = "label8";
-            label8.Size = new Size(138, 21);
-            label8.TabIndex = 19;
-            label8.Text = "Code Batiment";
             // 
             // label7
             // 
@@ -216,7 +177,7 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(616, 409);
+            checkBox2.Location = new Point(598, 182);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(66, 25);
             checkBox2.TabIndex = 12;
@@ -226,36 +187,12 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(550, 409);
+            checkBox1.Location = new Point(532, 182);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(60, 25);
             checkBox1.TabIndex = 11;
             checkBox1.Text = "Oui";
             checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(450, 317);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(308, 40);
-            textBox8.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(450, 242);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(308, 40);
-            textBox7.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(450, 167);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(308, 40);
-            textBox6.TabIndex = 8;
             // 
             // textBox5
             // 
@@ -303,9 +240,9 @@
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(229, 25);
             label2.Name = "label2";
-            label2.Size = new Size(348, 44);
+            label2.Size = new Size(332, 44);
             label2.TabIndex = 2;
-            label2.Text = "Add New Resident";
+            label2.Text = "Add New Student";
             // 
             // AddResident
             // 
@@ -333,9 +270,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label2;
-        private Label label10;
-        private Label label9;
-        private Label label8;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -344,9 +278,6 @@
         private Button button1;
         private CheckBox checkBox2;
         private CheckBox checkBox1;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
