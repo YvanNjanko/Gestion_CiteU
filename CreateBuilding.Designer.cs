@@ -32,27 +32,27 @@
             splitContainer1 = new SplitContainer();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
-            pictureBox3 = new PictureBox();
-            enterCode = new TextBox();
-            enterEtage = new TextBox();
-            enterRoom = new TextBox();
-            enterPrix = new TextBox();
-            enterBed = new TextBox();
-            CreateBuildingBtn = new Button();
-            pictureBox2 = new PictureBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            CreateBuildingBtn = new Button();
+            enterBed = new TextBox();
+            enterPrix = new TextBox();
+            enterRoom = new TextBox();
+            enterEtage = new TextBox();
+            enterCode = new TextBox();
+            pictureBox3 = new PictureBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -110,70 +110,61 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // label2
+            // label7
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(224, 29);
-            label2.Name = "label2";
-            label2.Size = new Size(388, 44);
-            label2.TabIndex = 3;
-            label2.Text = "Create New Building";
+            label7.AutoSize = true;
+            label7.Location = new Point(459, 213);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 21);
+            label7.TabIndex = 17;
+            label7.Text = "Lits";
             // 
-            // pictureBox3
+            // label6
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(646, 424);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(214, 144);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 5;
-            pictureBox3.TabStop = false;
+            label6.AutoSize = true;
+            label6.Location = new Point(459, 115);
+            label6.Name = "label6";
+            label6.Size = new Size(36, 21);
+            label6.TabIndex = 16;
+            label6.Text = "Prix";
+            label6.Click += label6_Click;
             // 
-            // enterCode
+            // label5
             // 
-            enterCode.Location = new Point(42, 139);
-            enterCode.Multiline = true;
-            enterCode.Name = "enterCode";
-            enterCode.PlaceholderText = "Entrez le code du  batiment";
-            enterCode.Size = new Size(327, 45);
-            enterCode.TabIndex = 6;
+            label5.AutoSize = true;
+            label5.Location = new Point(42, 292);
+            label5.Name = "label5";
+            label5.Size = new Size(89, 21);
+            label5.TabIndex = 15;
+            label5.Text = "Chambre";
             // 
-            // enterEtage
+            // label4
             // 
-            enterEtage.Location = new Point(42, 228);
-            enterEtage.Multiline = true;
-            enterEtage.Name = "enterEtage";
-            enterEtage.PlaceholderText = "Entrez le nombre d'etage";
-            enterEtage.Size = new Size(327, 45);
-            enterEtage.TabIndex = 7;
+            label4.AutoSize = true;
+            label4.Location = new Point(42, 204);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 21);
+            label4.TabIndex = 14;
+            label4.Text = "Etage";
             // 
-            // enterRoom
+            // label3
             // 
-            enterRoom.Location = new Point(42, 316);
-            enterRoom.Multiline = true;
-            enterRoom.Name = "enterRoom";
-            enterRoom.PlaceholderText = "Entrez le nbre de chambre/etage";
-            enterRoom.Size = new Size(327, 45);
-            enterRoom.TabIndex = 8;
+            label3.AutoSize = true;
+            label3.Location = new Point(42, 115);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 21);
+            label3.TabIndex = 13;
+            label3.Text = "Code";
             // 
-            // enterPrix
+            // pictureBox2
             // 
-            enterPrix.Location = new Point(459, 139);
-            enterPrix.Multiline = true;
-            enterPrix.Name = "enterPrix";
-            enterPrix.PlaceholderText = "Entrez le prix des chambres";
-            enterPrix.Size = new Size(327, 45);
-            enterPrix.TabIndex = 9;
-            // 
-            // enterBed
-            // 
-            enterBed.Location = new Point(459, 228);
-            enterBed.Multiline = true;
-            enterBed.Name = "enterBed";
-            enterBed.PlaceholderText = "Entrez le nbre de lit(s) par chambre";
-            enterBed.Size = new Size(327, 45);
-            enterBed.TabIndex = 10;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(18, 424);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(214, 144);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 12;
+            pictureBox2.TabStop = false;
             // 
             // CreateBuildingBtn
             // 
@@ -186,61 +177,71 @@
             CreateBuildingBtn.Text = "Create";
             CreateBuildingBtn.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // enterBed
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(18, 424);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(214, 144);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 12;
-            pictureBox2.TabStop = false;
+            enterBed.Location = new Point(459, 228);
+            enterBed.Multiline = true;
+            enterBed.Name = "enterBed";
+            enterBed.PlaceholderText = "Entrez le nbre de lit(s) par chambre";
+            enterBed.Size = new Size(327, 45);
+            enterBed.TabIndex = 10;
             // 
-            // label3
+            // enterPrix
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(42, 115);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 21);
-            label3.TabIndex = 13;
-            label3.Text = "Code";
+            enterPrix.Location = new Point(459, 139);
+            enterPrix.Multiline = true;
+            enterPrix.Name = "enterPrix";
+            enterPrix.PlaceholderText = "Entrez le prix des chambres";
+            enterPrix.Size = new Size(327, 45);
+            enterPrix.TabIndex = 9;
             // 
-            // label4
+            // enterRoom
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(42, 204);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 21);
-            label4.TabIndex = 14;
-            label4.Text = "Etage";
+            enterRoom.Location = new Point(42, 316);
+            enterRoom.Multiline = true;
+            enterRoom.Name = "enterRoom";
+            enterRoom.PlaceholderText = "Entrez le nbre de chambre/etage";
+            enterRoom.Size = new Size(327, 45);
+            enterRoom.TabIndex = 8;
             // 
-            // label5
+            // enterEtage
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(42, 292);
-            label5.Name = "label5";
-            label5.Size = new Size(89, 21);
-            label5.TabIndex = 15;
-            label5.Text = "Chambre";
+            enterEtage.Location = new Point(42, 228);
+            enterEtage.Multiline = true;
+            enterEtage.Name = "enterEtage";
+            enterEtage.PlaceholderText = "Entrez le nombre d'etage";
+            enterEtage.Size = new Size(327, 45);
+            enterEtage.TabIndex = 7;
             // 
-            // label6
+            // enterCode
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(459, 115);
-            label6.Name = "label6";
-            label6.Size = new Size(36, 21);
-            label6.TabIndex = 16;
-            label6.Text = "Prix";
-            label6.Click += label6_Click;
+            enterCode.Location = new Point(42, 139);
+            enterCode.Multiline = true;
+            enterCode.Name = "enterCode";
+            enterCode.PlaceholderText = "Entrez le code du  batiment";
+            enterCode.Size = new Size(327, 45);
+            enterCode.TabIndex = 6;
+            enterCode.TextChanged += enterCode_TextChanged;
             // 
-            // label7
+            // pictureBox3
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(459, 213);
-            label7.Name = "label7";
-            label7.Size = new Size(35, 21);
-            label7.TabIndex = 17;
-            label7.Text = "Lits";
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(646, 424);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(214, 144);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(224, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(388, 44);
+            label2.TabIndex = 3;
+            label2.Text = "Create New Building";
             // 
             // Form1
             // 
@@ -259,8 +260,8 @@
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 

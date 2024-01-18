@@ -31,5 +31,10 @@ namespace FrontEnd_Gestion_CiteU
         {
 
         }
+
+        private void enterCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
