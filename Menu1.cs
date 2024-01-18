@@ -16,5 +16,10 @@ namespace FrontEnd_Gestion_CiteU
         {
             InitializeComponent();
         }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

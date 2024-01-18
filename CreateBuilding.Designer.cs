@@ -34,12 +34,12 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             pictureBox3 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            button1 = new Button();
+            enterCode = new TextBox();
+            enterEtage = new TextBox();
+            enterRoom = new TextBox();
+            enterPrix = new TextBox();
+            enterBed = new TextBox();
+            CreateBuildingBtn = new Button();
             pictureBox2 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
@@ -75,12 +75,12 @@
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(pictureBox2);
-            splitContainer1.Panel2.Controls.Add(button1);
-            splitContainer1.Panel2.Controls.Add(textBox5);
-            splitContainer1.Panel2.Controls.Add(textBox4);
-            splitContainer1.Panel2.Controls.Add(textBox3);
-            splitContainer1.Panel2.Controls.Add(textBox2);
-            splitContainer1.Panel2.Controls.Add(textBox1);
+            splitContainer1.Panel2.Controls.Add(CreateBuildingBtn);
+            splitContainer1.Panel2.Controls.Add(enterBed);
+            splitContainer1.Panel2.Controls.Add(enterPrix);
+            splitContainer1.Panel2.Controls.Add(enterRoom);
+            splitContainer1.Panel2.Controls.Add(enterEtage);
+            splitContainer1.Panel2.Controls.Add(enterCode);
             splitContainer1.Panel2.Controls.Add(pictureBox3);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Size = new Size(1098, 568);
@@ -130,61 +130,61 @@
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // enterCode
             // 
-            textBox1.Location = new Point(42, 139);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Entrez le code du  batiment";
-            textBox1.Size = new Size(327, 45);
-            textBox1.TabIndex = 6;
+            enterCode.Location = new Point(42, 139);
+            enterCode.Multiline = true;
+            enterCode.Name = "enterCode";
+            enterCode.PlaceholderText = "Entrez le code du  batiment";
+            enterCode.Size = new Size(327, 45);
+            enterCode.TabIndex = 6;
             // 
-            // textBox2
+            // enterEtage
             // 
-            textBox2.Location = new Point(42, 228);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Entrez le nombre d'etage";
-            textBox2.Size = new Size(327, 45);
-            textBox2.TabIndex = 7;
+            enterEtage.Location = new Point(42, 228);
+            enterEtage.Multiline = true;
+            enterEtage.Name = "enterEtage";
+            enterEtage.PlaceholderText = "Entrez le nombre d'etage";
+            enterEtage.Size = new Size(327, 45);
+            enterEtage.TabIndex = 7;
             // 
-            // textBox3
+            // enterRoom
             // 
-            textBox3.Location = new Point(42, 316);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Entrez le nbre de chambre/etage";
-            textBox3.Size = new Size(327, 45);
-            textBox3.TabIndex = 8;
+            enterRoom.Location = new Point(42, 316);
+            enterRoom.Multiline = true;
+            enterRoom.Name = "enterRoom";
+            enterRoom.PlaceholderText = "Entrez le nbre de chambre/etage";
+            enterRoom.Size = new Size(327, 45);
+            enterRoom.TabIndex = 8;
             // 
-            // textBox4
+            // enterPrix
             // 
-            textBox4.Location = new Point(459, 139);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Entrez le prix des chambres";
-            textBox4.Size = new Size(327, 45);
-            textBox4.TabIndex = 9;
+            enterPrix.Location = new Point(459, 139);
+            enterPrix.Multiline = true;
+            enterPrix.Name = "enterPrix";
+            enterPrix.PlaceholderText = "Entrez le prix des chambres";
+            enterPrix.Size = new Size(327, 45);
+            enterPrix.TabIndex = 9;
             // 
-            // textBox5
+            // enterBed
             // 
-            textBox5.Location = new Point(459, 228);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Entrez le nbre de lit(s) par chambre";
-            textBox5.Size = new Size(327, 45);
-            textBox5.TabIndex = 10;
+            enterBed.Location = new Point(459, 228);
+            enterBed.Multiline = true;
+            enterBed.Name = "enterBed";
+            enterBed.PlaceholderText = "Entrez le nbre de lit(s) par chambre";
+            enterBed.Size = new Size(327, 45);
+            enterBed.TabIndex = 10;
             // 
-            // button1
+            // CreateBuildingBtn
             // 
-            button1.BackColor = Color.Black;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(459, 315);
-            button1.Name = "button1";
-            button1.Size = new Size(324, 46);
-            button1.TabIndex = 11;
-            button1.Text = "Create";
-            button1.UseVisualStyleBackColor = false;
+            CreateBuildingBtn.BackColor = Color.Black;
+            CreateBuildingBtn.ForeColor = Color.White;
+            CreateBuildingBtn.Location = new Point(459, 315);
+            CreateBuildingBtn.Name = "CreateBuildingBtn";
+            CreateBuildingBtn.Size = new Size(324, 46);
+            CreateBuildingBtn.TabIndex = 11;
+            CreateBuildingBtn.Text = "Create";
+            CreateBuildingBtn.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -272,12 +272,12 @@
         private Label label2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private Button button1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button CreateBuildingBtn;
+        private TextBox enterBed;
+        private TextBox enterPrix;
+        private TextBox enterRoom;
+        private TextBox enterEtage;
+        private TextBox enterCode;
         private Label label7;
         private Label label6;
         private Label label5;
