@@ -35,9 +35,8 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Redirection vers la page CreateBuilding.cs
-            createBuild createBuildingForm = new CreateRoom();
-            createBuildingForm.Show();
+            NewBuild CreateBuildForm = new NewBuild();
+            CreateBuildForm.Show();
             this.Hide();
 
 
