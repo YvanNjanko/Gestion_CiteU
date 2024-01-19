@@ -34,6 +34,31 @@ namespace FrontEnd_Gestion_CiteU
 
         private void enterCode_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void enterEtage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterRoom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterPrix_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterBed_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateBuildingBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

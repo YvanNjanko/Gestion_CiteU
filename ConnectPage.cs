@@ -21,5 +21,10 @@ namespace FrontEnd_Gestion_CiteU
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

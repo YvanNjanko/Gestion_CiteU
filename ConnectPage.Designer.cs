@@ -65,6 +65,7 @@
             textBox1.PlaceholderText = "Enter your username";
             textBox1.Size = new Size(403, 70);
             textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 

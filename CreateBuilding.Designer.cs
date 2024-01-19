@@ -176,6 +176,7 @@
             CreateBuildingBtn.TabIndex = 11;
             CreateBuildingBtn.Text = "Create";
             CreateBuildingBtn.UseVisualStyleBackColor = false;
+            CreateBuildingBtn.Click += CreateBuildingBtn_Click;
             // 
             // enterBed
             // 
@@ -185,6 +186,7 @@
             enterBed.PlaceholderText = "Entrez le nbre de lit(s) par chambre";
             enterBed.Size = new Size(327, 45);
             enterBed.TabIndex = 10;
+            enterBed.TextChanged += enterBed_TextChanged;
             // 
             // enterPrix
             // 
@@ -194,6 +196,7 @@
             enterPrix.PlaceholderText = "Entrez le prix des chambres";
             enterPrix.Size = new Size(327, 45);
             enterPrix.TabIndex = 9;
+            enterPrix.TextChanged += enterPrix_TextChanged;
             // 
             // enterRoom
             // 
@@ -203,6 +206,7 @@
             enterRoom.PlaceholderText = "Entrez le nbre de chambre/etage";
             enterRoom.Size = new Size(327, 45);
             enterRoom.TabIndex = 8;
+            enterRoom.TextChanged += enterRoom_TextChanged;
             // 
             // enterEtage
             // 
@@ -212,6 +216,7 @@
             enterEtage.PlaceholderText = "Entrez le nombre d'etage";
             enterEtage.Size = new Size(327, 45);
             enterEtage.TabIndex = 7;
+            enterEtage.TextChanged += enterEtage_TextChanged;
             // 
             // enterCode
             // 
