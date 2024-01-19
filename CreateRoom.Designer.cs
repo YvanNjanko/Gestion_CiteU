@@ -32,6 +32,8 @@
             splitContainer1 = new SplitContainer();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
+            button1 = new Button();
             label4 = new Label();
             label3 = new Label();
             pictureBox2 = new PictureBox();
@@ -39,7 +41,6 @@
             enterEtage = new TextBox();
             enterCode = new TextBox();
             label2 = new Label();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button2);
             splitContainer1.Panel2.Controls.Add(button1);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(label3);
@@ -94,6 +96,28 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Black;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(107, 408);
+            button2.Name = "button2";
+            button2.Size = new Size(268, 54);
+            button2.TabIndex = 26;
+            button2.Text = "Delete Room";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(14, 34);
+            button1.Name = "button1";
+            button1.Size = new Size(40, 27);
+            button1.TabIndex = 25;
+            button1.Text = "<";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label4
             // 
@@ -165,16 +189,6 @@
             label2.TabIndex = 4;
             label2.Text = "Create New Room";
             // 
-            // button1
-            // 
-            button1.Location = new Point(14, 34);
-            button1.Name = "button1";
-            button1.Size = new Size(40, 27);
-            button1.TabIndex = 25;
-            button1.Text = "<";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // CreateRoom
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -209,5 +223,6 @@
         private Label label4;
         private Label label3;
         private Button button1;
+        private Button button2;
     }
 }

@@ -234,11 +234,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(18, 12);
+            label3.Location = new Point(32, 12);
             label3.Name = "label3";
-            label3.Size = new Size(194, 23);
+            label3.Size = new Size(156, 23);
             label3.TabIndex = 16;
-            label3.Text = "Create New Room";
+            label3.Text = "Manage Room";
             // 
             // GoToCreateRoomBtn
             // 
@@ -285,7 +285,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(31, 11);
+            label7.Location = new Point(39, 11);
             label7.Name = "label7";
             label7.Size = new Size(138, 23);
             label7.TabIndex = 28;
@@ -336,11 +336,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(30, 12);
+            label4.Location = new Point(41, 12);
             label4.Name = "label4";
-            label4.Size = new Size(149, 23);
+            label4.Size = new Size(137, 23);
             label4.TabIndex = 19;
-            label4.Text = "Add New Bed";
+            label4.Text = "Manage Bed";
             // 
             // GoToCreateBedBtn
             // 
