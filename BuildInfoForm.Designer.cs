@@ -65,7 +65,7 @@
             button2.BackColor = Color.Black;
             button2.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(73, 356);
+            button2.Location = new Point(83, 321);
             button2.Name = "button2";
             button2.Size = new Size(222, 60);
             button2.TabIndex = 26;
@@ -78,7 +78,7 @@
             button3.BackColor = Color.Black;
             button3.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(73, 438);
+            button3.Location = new Point(83, 403);
             button3.Name = "button3";
             button3.Size = new Size(222, 60);
             button3.TabIndex = 27;
@@ -89,7 +89,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(55, 143);
+            pictureBox1.Location = new Point(65, 108);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(271, 197);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

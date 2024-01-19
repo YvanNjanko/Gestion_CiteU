@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStud));
             button1 = new Button();
             pictureBox2 = new PictureBox();
-            label11 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -39,8 +38,6 @@
             label3 = new Label();
             label1 = new Label();
             addStudentBtn = new Button();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
             enterNiveau = new TextBox();
             enterMat = new TextBox();
             enterAge = new TextBox();
@@ -49,6 +46,8 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             splitContainer1 = new SplitContainer();
+            checkBox1 = new CheckBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -70,26 +69,17 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(463, 88);
+            pictureBox2.Location = new Point(463, 106);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(457, 289);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 23;
             pictureBox2.TabStop = false;
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(151, 419);
-            label11.Name = "label11";
-            label11.Size = new Size(120, 21);
-            label11.TabIndex = 22;
-            label11.Text = "Handicape ?";
-            // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(60, 358);
+            label7.Location = new Point(65, 354);
             label7.Name = "label7";
             label7.Size = new Size(185, 21);
             label7.TabIndex = 18;
@@ -98,7 +88,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(60, 281);
+            label6.Location = new Point(65, 277);
             label6.Name = "label6";
             label6.Size = new Size(89, 21);
             label6.TabIndex = 17;
@@ -107,7 +97,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(62, 213);
+            label5.Location = new Point(67, 209);
             label5.Name = "label5";
             label5.Size = new Size(45, 21);
             label5.TabIndex = 16;
@@ -116,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(62, 147);
+            label4.Location = new Point(67, 143);
             label4.Name = "label4";
             label4.Size = new Size(48, 21);
             label4.TabIndex = 15;
@@ -125,7 +115,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(62, 82);
+            label3.Location = new Point(67, 78);
             label3.Name = "label3";
             label3.Size = new Size(151, 21);
             label3.TabIndex = 14;
@@ -146,36 +136,17 @@
             // 
             addStudentBtn.BackColor = Color.Black;
             addStudentBtn.ForeColor = Color.White;
-            addStudentBtn.Location = new Point(546, 403);
+            addStudentBtn.Location = new Point(67, 436);
             addStudentBtn.Name = "addStudentBtn";
             addStudentBtn.Size = new Size(332, 51);
             addStudentBtn.TabIndex = 13;
             addStudentBtn.Text = "Add";
             addStudentBtn.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(224, 447);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(66, 25);
-            checkBox2.TabIndex = 12;
-            checkBox2.Text = "Non";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(151, 447);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(60, 25);
-            checkBox1.TabIndex = 11;
-            checkBox1.Text = "Oui";
-            checkBox1.UseVisualStyleBackColor = true;
+            addStudentBtn.Click += addStudentBtn_Click;
             // 
             // enterNiveau
             // 
-            enterNiveau.Location = new Point(60, 371);
+            enterNiveau.Location = new Point(65, 367);
             enterNiveau.Multiline = true;
             enterNiveau.Name = "enterNiveau";
             enterNiveau.Size = new Size(342, 37);
@@ -184,7 +155,7 @@
             // 
             // enterMat
             // 
-            enterMat.Location = new Point(60, 295);
+            enterMat.Location = new Point(65, 291);
             enterMat.Multiline = true;
             enterMat.Name = "enterMat";
             enterMat.Size = new Size(342, 37);
@@ -193,7 +164,7 @@
             // 
             // enterAge
             // 
-            enterAge.Location = new Point(60, 226);
+            enterAge.Location = new Point(65, 222);
             enterAge.Multiline = true;
             enterAge.Name = "enterAge";
             enterAge.Size = new Size(342, 37);
@@ -202,7 +173,7 @@
             // 
             // enterSex
             // 
-            enterSex.Location = new Point(60, 158);
+            enterSex.Location = new Point(65, 154);
             enterSex.Multiline = true;
             enterSex.Name = "enterSex";
             enterSex.Size = new Size(342, 37);
@@ -211,7 +182,7 @@
             // 
             // EnterName
             // 
-            EnterName.Location = new Point(60, 95);
+            EnterName.Location = new Point(65, 91);
             EnterName.Multiline = true;
             EnterName.Name = "EnterName";
             EnterName.Size = new Size(342, 37);
@@ -252,26 +223,49 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button2);
+            splitContainer1.Panel2.Controls.Add(checkBox1);
             splitContainer1.Panel2.Controls.Add(button1);
             splitContainer1.Panel2.Controls.Add(pictureBox2);
-            splitContainer1.Panel2.Controls.Add(label11);
             splitContainer1.Panel2.Controls.Add(label7);
             splitContainer1.Panel2.Controls.Add(label6);
             splitContainer1.Panel2.Controls.Add(label5);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(addStudentBtn);
-            splitContainer1.Panel2.Controls.Add(checkBox2);
-            splitContainer1.Panel2.Controls.Add(checkBox1);
             splitContainer1.Panel2.Controls.Add(enterNiveau);
             splitContainer1.Panel2.Controls.Add(enterMat);
             splitContainer1.Panel2.Controls.Add(enterAge);
             splitContainer1.Panel2.Controls.Add(enterSex);
             splitContainer1.Panel2.Controls.Add(EnterName);
             splitContainer1.Panel2.Controls.Add(label2);
+            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(1135, 559);
             splitContainer1.SplitterDistance = 199;
             splitContainer1.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.White;
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(911, 539);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(18, 17);
+            checkBox1.TabIndex = 25;
+            checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Black;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(539, 436);
+            button2.Name = "button2";
+            button2.Size = new Size(332, 51);
+            button2.TabIndex = 26;
+            button2.Text = "Delete Student";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // AddStud
             // 
@@ -298,7 +292,6 @@
 
         private Button button1;
         private PictureBox pictureBox2;
-        private Label label11;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -306,8 +299,6 @@
         private Label label3;
         private Label label1;
         private Button addStudentBtn;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
         private TextBox enterNiveau;
         private TextBox enterMat;
         private TextBox enterAge;
@@ -316,5 +307,7 @@
         private Label label2;
         private PictureBox pictureBox1;
         private SplitContainer splitContainer1;
+        private CheckBox checkBox1;
+        private Button button2;
     }
 }
