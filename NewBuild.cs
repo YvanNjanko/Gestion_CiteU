@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace FrontEnd_Gestion_CiteU
 {
-    public partial class AddStudent : Form
+    public partial class NewBuild : Form
     {
-        public AddStudent()
+        public NewBuild()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Menu1 MenuForm = new Menu1();
+            MenuForm.Show();
+            this.Hide();
         }
     }
 }

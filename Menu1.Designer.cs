@@ -397,7 +397,7 @@
             // 
             button7.BackColor = Color.Black;
             button7.ForeColor = Color.White;
-            button7.Location = new Point(39, 102);
+            button7.Location = new Point(49, 102);
             button7.Name = "button7";
             button7.Size = new Size(109, 34);
             button7.TabIndex = 30;
@@ -408,7 +408,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(51, 37);
+            pictureBox7.Location = new Point(61, 37);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(83, 71);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;

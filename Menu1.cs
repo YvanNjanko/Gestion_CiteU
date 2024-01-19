@@ -35,7 +35,11 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            // Redirection vers la page CreateBuilding.cs
+            createBuild createBuildingForm = new CreateRoom();
+            createBuildingForm.Show();
+            this.Hide();
+
 
         }
 
@@ -58,7 +62,7 @@ namespace FrontEnd_Gestion_CiteU
 
         private void GoToSaveStdBtn_Click(object sender, EventArgs e)
         {
-            AddStudent AddStudForm = new AddStudent();
+            AddStud AddStudForm = new AddStud();
             AddStudForm.Show();
             this.Hide();
 

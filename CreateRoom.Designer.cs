@@ -32,13 +32,14 @@
             splitContainer1 = new SplitContainer();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
-            enterCode = new TextBox();
-            enterEtage = new TextBox();
-            createRoomBtn = new Button();
-            pictureBox2 = new PictureBox();
-            label3 = new Label();
             label4 = new Label();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            createRoomBtn = new Button();
+            enterEtage = new TextBox();
+            enterCode = new TextBox();
+            label2 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button1);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(pictureBox2);
@@ -93,44 +95,23 @@
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
-            // label2
+            // label4
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(240, 26);
-            label2.Name = "label2";
-            label2.Size = new Size(351, 44);
-            label2.TabIndex = 4;
-            label2.Text = "Create New Room";
+            label4.AutoSize = true;
+            label4.Location = new Point(46, 215);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 21);
+            label4.TabIndex = 10;
+            label4.Text = "Etage";
             // 
-            // enterCode
+            // label3
             // 
-            enterCode.Location = new Point(46, 144);
-            enterCode.Multiline = true;
-            enterCode.Name = "enterCode";
-            enterCode.PlaceholderText = "Entrez le code du batiment";
-            enterCode.Size = new Size(393, 45);
-            enterCode.TabIndex = 5;
-            // 
-            // enterEtage
-            // 
-            enterEtage.Location = new Point(46, 239);
-            enterEtage.Multiline = true;
-            enterEtage.Name = "enterEtage";
-            enterEtage.PlaceholderText = "Entrez le numero de l'etage";
-            enterEtage.Size = new Size(393, 45);
-            enterEtage.TabIndex = 6;
-            // 
-            // createRoomBtn
-            // 
-            createRoomBtn.BackColor = Color.Black;
-            createRoomBtn.ForeColor = Color.White;
-            createRoomBtn.Location = new Point(107, 329);
-            createRoomBtn.Name = "createRoomBtn";
-            createRoomBtn.Size = new Size(268, 54);
-            createRoomBtn.TabIndex = 7;
-            createRoomBtn.Text = "Create";
-            createRoomBtn.UseVisualStyleBackColor = false;
+            label3.AutoSize = true;
+            label3.Location = new Point(46, 120);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 21);
+            label3.TabIndex = 9;
+            label3.Text = "Code";
             // 
             // pictureBox2
             // 
@@ -142,23 +123,57 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // label3
+            // createRoomBtn
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(46, 120);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 21);
-            label3.TabIndex = 9;
-            label3.Text = "Code";
+            createRoomBtn.BackColor = Color.Black;
+            createRoomBtn.ForeColor = Color.White;
+            createRoomBtn.Location = new Point(107, 329);
+            createRoomBtn.Name = "createRoomBtn";
+            createRoomBtn.Size = new Size(268, 54);
+            createRoomBtn.TabIndex = 7;
+            createRoomBtn.Text = "Create";
+            createRoomBtn.UseVisualStyleBackColor = false;
+            createRoomBtn.Click += createRoomBtn_Click;
             // 
-            // label4
+            // enterEtage
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(46, 215);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 21);
-            label4.TabIndex = 10;
-            label4.Text = "Etage";
+            enterEtage.Location = new Point(46, 239);
+            enterEtage.Multiline = true;
+            enterEtage.Name = "enterEtage";
+            enterEtage.PlaceholderText = "Entrez le numero de l'etage";
+            enterEtage.Size = new Size(393, 45);
+            enterEtage.TabIndex = 6;
+            enterEtage.TextChanged += enterEtage_TextChanged;
+            // 
+            // enterCode
+            // 
+            enterCode.Location = new Point(46, 144);
+            enterCode.Multiline = true;
+            enterCode.Name = "enterCode";
+            enterCode.PlaceholderText = "Entrez le code du batiment";
+            enterCode.Size = new Size(393, 45);
+            enterCode.TabIndex = 5;
+            enterCode.TextChanged += enterCode_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(240, 26);
+            label2.Name = "label2";
+            label2.Size = new Size(351, 44);
+            label2.TabIndex = 4;
+            label2.Text = "Create New Room";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(14, 34);
+            button1.Name = "button1";
+            button1.Size = new Size(40, 27);
+            button1.TabIndex = 25;
+            button1.Text = "<";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // CreateRoom
             // 
@@ -193,5 +208,6 @@
         private Label label2;
         private Label label4;
         private Label label3;
+        private Button button1;
     }
 }
