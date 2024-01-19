@@ -90,6 +90,7 @@
             SeConnecter.TabIndex = 3;
             SeConnecter.Text = "S'inscrire";
             SeConnecter.UseVisualStyleBackColor = false;
+            SeConnecter.Click += SeConnecter_Click;
             // 
             // pictureBox2
             // 
