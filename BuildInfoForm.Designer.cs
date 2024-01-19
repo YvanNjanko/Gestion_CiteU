@@ -28,12 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "BuildInfoForm";
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(77, 95);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 57;
+            dataGridView1.RowTemplate.Height = 32;
+            dataGridView1.Size = new Size(927, 223);
+            dataGridView1.TabIndex = 0;
+            // 
+            // BuildInfoForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1085, 577);
+            Controls.Add(dataGridView1);
+            Font = new Font("Century", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            Name = "BuildInfoForm";
+            Text = "BuildInfoForm";
+            Load += BuildInfoForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
     }
 }

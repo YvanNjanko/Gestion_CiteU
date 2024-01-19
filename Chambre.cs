@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FrontEnd_Gestion_CiteU
 {
-    internal class Chambre
+    class Chambre
     {
+        public string Code { get; set; }
+        public int NombreLits { get; set; }
+        public int NombreLitsOccupes { get; set; }
     }
 }

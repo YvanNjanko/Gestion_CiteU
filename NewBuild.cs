@@ -72,17 +72,41 @@ namespace FrontEnd_Gestion_CiteU
                 connection.Open();
 
                 // Insérer un nouveau bâtiment dans la table Batiment
-                string query = "INSERT INTO Batiment (Code, NombreEtages, ChambresParEtage, PrixChambre, NombreMaxLitsParChambre) VALUES (@code, @nombreEtages, @chambresParEtage, @prixChambre, @nombreMaxLitsParChambre)";
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@code", code);
-                cmd.Parameters.AddWithValue("@nombreEtages", nombreEtages);
-                cmd.Parameters.AddWithValue("@chambresParEtage", chambresParEtage);
-                cmd.Parameters.AddWithValue("@prixChambre", prixChambre);
-                cmd.Parameters.AddWithValue("@nombreMaxLitsParChambre", nombreMaxLitsParChambre);
+                string batimentQuery = "INSERT INTO Batiment (Code, NombreEtages, ChambresParEtage, PrixChambre, NombreMaxLitsParChambre) VALUES (@code, @nombreEtages, @chambresParEtage, @prixChambre, @nombreMaxLitsParChambre)";
+                MySqlCommand batimentCmd = new MySqlCommand(batimentQuery, connection);
+                batimentCmd.Parameters.AddWithValue("@code", code);
+                batimentCmd.Parameters.AddWithValue("@nombreEtages", nombreEtages);
+                batimentCmd.Parameters.AddWithValue("@chambresParEtage", chambresParEtage);
+                batimentCmd.Parameters.AddWithValue("@prixChambre", prixChambre);
+                batimentCmd.Parameters.AddWithValue("@nombreMaxLitsParChambre", nombreMaxLitsParChambre);
 
-                cmd.ExecuteNonQuery();
+                batimentCmd.ExecuteNonQuery();
 
                 MessageBox.Show("Bâtiment ajouté avec succès dans la base de données.");
+
+                // Créer les chambres pour chaque niveau du bâtiment
+                for (int etage = 0; etage <= nombreEtages; etage++)
+                {
+                    for (int chambreNumero = 1; chambreNumero <= chambresParEtage; chambreNumero++)
+                    {
+                        string chambreCode = etage.ToString() + code + chambreNumero.ToString();
+                        int nombreLits = nombreMaxLitsParChambre;
+                        int nombreLitsOccupes = 0;
+
+                        // Insérer la chambre dans la table Chambre
+                        string chambreQuery = "INSERT INTO Chambre (Code, NombreLits, NombreLitsOccupes, BatimentCode, NumeroEtage) VALUES (@code, @nombreLits, @nombreLitsOccupes, @batimentCode, @numeroEtage)";
+                        MySqlCommand chambreCmd = new MySqlCommand(chambreQuery, connection);
+                        chambreCmd.Parameters.AddWithValue("@code", chambreCode);
+                        chambreCmd.Parameters.AddWithValue("@nombreLits", nombreLits);
+                        chambreCmd.Parameters.AddWithValue("@nombreLitsOccupes", nombreLitsOccupes);
+                        chambreCmd.Parameters.AddWithValue("@batimentCode", code.ToString());
+                        chambreCmd.Parameters.AddWithValue("@numeroEtage", etage);
+
+                        chambreCmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Chambres ajoutées avec succès dans la base de données.");
 
                 // Réinitialiser les valeurs des champs du formulaire
                 enterCode.Text = string.Empty;
