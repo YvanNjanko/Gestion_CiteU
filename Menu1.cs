@@ -83,6 +83,9 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button7_Click(object sender, EventArgs e)
         {
+            CheckRoom Form = new CheckRoom();
+            Form.Show();
+            this.Hide();
 
         }
     }

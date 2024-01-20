@@ -98,6 +98,13 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            CreateAccount MenuForm = new CreateAccount();
+            MenuForm.Show();
+            this.Hide();
+
+        }
     }
-   
+
 }

@@ -80,6 +80,12 @@ namespace FrontEnd_Gestion_CiteU
                     // Ouvrir la connexion à la base de données
                     connection.Open();
 
+                    // Supprimer les résidents associés aux chambres du bâtiment
+                    string deleteResidentsQuery = "DELETE FROM Resident WHERE CodeChambre IN (SELECT Code FROM Chambre WHERE BatimentCode = @batimentCode)";
+                    MySqlCommand deleteResidentsCmd = new MySqlCommand(deleteResidentsQuery, connection);
+                    deleteResidentsCmd.Parameters.AddWithValue("@batimentCode", codeBatimentToDelete);
+                    deleteResidentsCmd.ExecuteNonQuery();
+
                     // Supprimer les chambres associées au bâtiment
                     string deleteChambresQuery = "DELETE FROM Chambre WHERE BatimentCode = @batimentCode";
                     MySqlCommand deleteChambresCmd = new MySqlCommand(deleteChambresQuery, connection);
@@ -92,7 +98,7 @@ namespace FrontEnd_Gestion_CiteU
                     deleteBatimentCmd.Parameters.AddWithValue("@code", codeBatimentToDelete);
                     deleteBatimentCmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Bâtiment et chambres associées supprimés avec succès.");
+                    MessageBox.Show("Bâtiment, chambres et résidents associés supprimés avec succès.");
 
                     // Rafraîchir les données affichées dans le DataGridView
                     LoadBuildingData();
@@ -108,6 +114,7 @@ namespace FrontEnd_Gestion_CiteU
                 }
             }
         }
+
 
     }
 }

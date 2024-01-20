@@ -481,6 +481,7 @@
             Controls.Add(toolStripContainer1);
             Controls.Add(label2);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Menu1";
             Text = "Menu1";
             Load += Menu1_Load;
