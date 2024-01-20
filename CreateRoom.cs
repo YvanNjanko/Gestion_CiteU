@@ -95,7 +95,14 @@ namespace FrontEnd_Gestion_CiteU
                         MySqlCommand getChambresParEtageCmd = new MySqlCommand(getChambresParEtageQuery, connection);
                         getChambresParEtageCmd.Parameters.AddWithValue("@codeBatiment", codeBatiment);
 
+                        // Récupérer le nombre de lits par chambre
+                        string getLitQuery = "SELECT NombreMaxLitsParChambre FROM Batiment WHERE Code = @codeBatiment";
+                        MySqlCommand getLitCmd = new MySqlCommand(getLitQuery, connection);
+                        getLitCmd.Parameters.AddWithValue("@codeBatiment", codeBatiment);
+
                         int chambresParEtage = Convert.ToInt32(getChambresParEtageCmd.ExecuteScalar());
+                        int nbreLits = Convert.ToInt32(getLitCmd.ExecuteScalar());
+                        int NombreLitsOccupes = 0;
 
                         if (nombreChambres < chambresParEtage)
                         {
@@ -110,11 +117,13 @@ namespace FrontEnd_Gestion_CiteU
                             }
 
                             // Ajouter une nouvelle chambre
-                            string insertChambreQuery = "INSERT INTO Chambre (Code, NumeroEtage, BatimentCode) VALUES (@codeChambre, @numeroEtage, @batimentCode)";
+                            string insertChambreQuery = "INSERT INTO Chambre (Code, NumeroEtage, BatimentCode, NombreLitsOccupes, NombreLits) VALUES (@codeChambre, @numeroEtage, @batimentCode, @NombreLitsOccupes,@NombreLits)";
                             MySqlCommand insertChambreCmd = new MySqlCommand(insertChambreQuery, connection);
                             insertChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
                             insertChambreCmd.Parameters.AddWithValue("@numeroEtage", numeroEtage);
                             insertChambreCmd.Parameters.AddWithValue("@batimentCode", codeBatiment);
+                            insertChambreCmd.Parameters.AddWithValue("@NombreLitsOccupes", NombreLitsOccupes);
+                            insertChambreCmd.Parameters.AddWithValue("@NombreLits", nbreLits);
 
                             insertChambreCmd.ExecuteNonQuery();
 
