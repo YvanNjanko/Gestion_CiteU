@@ -181,11 +181,18 @@ namespace FrontEnd_Gestion_CiteU
 
                     if (countChambre > 0)
                     {
+
                         // Supprimer la chambre
                         string deleteChambreQuery = "DELETE FROM Chambre WHERE Code = @codeChambre";
                         MySqlCommand deleteChambreCmd = new MySqlCommand(deleteChambreQuery, connection);
                         deleteChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambreToDelete);
                         deleteChambreCmd.ExecuteNonQuery();
+
+                        // Supprimer les residents
+                        string deleteResidentQuery = "DELETE FROM resident WHERE CodeChambre = @codeChambre";
+                        MySqlCommand deleteResidentCmd = new MySqlCommand(deleteResidentQuery, connection);
+                        deleteResidentCmd.Parameters.AddWithValue("@codeChambre", codeChambreToDelete);
+                        deleteResidentCmd.ExecuteNonQuery();
 
                         MessageBox.Show("Chambre supprimée avec succès.");
                     }

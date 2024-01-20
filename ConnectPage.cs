@@ -18,7 +18,7 @@ namespace FrontEnd_Gestion_CiteU
         private void Form1_Load(object sender, EventArgs e)
         {
             // Initialise la connexion à la base de données
-            connection = new MySqlConnection(connectionString);
+           /* connection = new MySqlConnection(connectionString);
 
             try
             {
@@ -35,6 +35,7 @@ namespace FrontEnd_Gestion_CiteU
                 // Ferme la connexion, assurez-vous de la fermer lorsque vous n'en avez plus besoin
                 connection.Close();
             }
+           */
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

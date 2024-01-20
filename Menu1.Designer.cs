@@ -61,6 +61,8 @@
             label5 = new Label();
             GoToSaveStdBtn = new Button();
             pictureBox4 = new PictureBox();
+            label9 = new Label();
+            button8 = new Button();
             contextMenuStrip1.SuspendLayout();
             toolStripContainer1.ContentPanel.SuspendLayout();
             toolStripContainer1.SuspendLayout();
@@ -466,12 +468,36 @@
             pictureBox4.TabIndex = 20;
             pictureBox4.TabStop = false;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(2, 557);
+            label9.Name = "label9";
+            label9.Size = new Size(92, 21);
+            label9.TabIndex = 12;
+            label9.Text = "Log Out >";
+            label9.Click += label9_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.Black;
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(982, 524);
+            button8.Name = "button8";
+            button8.Size = new Size(123, 42);
+            button8.TabIndex = 13;
+            button8.Text = "Check CU";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
             // Menu1
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1117, 578);
+            Controls.Add(button8);
+            Controls.Add(label9);
             Controls.Add(toolStripContainer7);
             Controls.Add(toolStripContainer6);
             Controls.Add(toolStripContainer5);
@@ -564,5 +590,7 @@
         private Button GoToCheckStBtn;
         private Button GoToCreateBedBtn;
         private Button GoToSaveStdBtn;
+        private Label label9;
+        private Button button8;
     }
 }

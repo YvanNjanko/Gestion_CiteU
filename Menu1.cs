@@ -88,5 +88,19 @@ namespace FrontEnd_Gestion_CiteU
             this.Hide();
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            ConnectPage MenuForm = new ConnectPage();
+            MenuForm.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            CiteStatus MenuForm = new CiteStatus();
+            MenuForm.Show();
+            this.Hide();
+        }
     }
 }
