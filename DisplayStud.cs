@@ -119,7 +119,7 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
-        
+
 
         private bool GetStudentHandicapStatus(string matricule)
         {
@@ -190,7 +190,8 @@ namespace FrontEnd_Gestion_CiteU
 
                             int nombreLits = Convert.ToInt32(checkLitsCmd.ExecuteScalar());
 
-                            if(nombreLitsOccupes < nombreLits) {
+                            if (nombreLitsOccupes < nombreLits)
+                            {
 
                                 // Vérifier si la chambre est vide (pas encore d'occupant)
                                 if (nombreLitsOccupes == 0)
@@ -302,7 +303,7 @@ namespace FrontEnd_Gestion_CiteU
                                 MessageBox.Show("La chambre n'a plus de lit disponible.");
                             }
                         }
-                            
+
                         else
                         {
                             MessageBox.Show("Veuillez entrer un nombre valide de mois de location.");
@@ -424,6 +425,11 @@ namespace FrontEnd_Gestion_CiteU
             return Convert.ToInt32(getStudentNiveauAcademiqueCmd.ExecuteScalar());
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheckResd MenuForm = new CheckResd();
+            MenuForm.Show();
+            this.Hide();
+        }
     }
 }

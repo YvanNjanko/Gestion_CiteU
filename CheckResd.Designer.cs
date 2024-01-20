@@ -1,6 +1,6 @@
 ﻿namespace FrontEnd_Gestion_CiteU
 {
-    partial class DisplayStud
+    partial class CheckResd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayStud));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckResd));
             dataGridViewBuildings = new DataGridView();
             label2 = new Label();
-            addStudentBtn = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            button3 = new Button();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
+            addStudentBtn = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -44,96 +43,83 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(422, 85);
+            dataGridViewBuildings.Location = new Point(528, 83);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(675, 404);
-            dataGridViewBuildings.TabIndex = 1;
+            dataGridViewBuildings.Size = new Size(507, 404);
+            dataGridViewBuildings.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(592, 25);
+            label2.Location = new Point(600, 31);
             label2.Name = "label2";
-            label2.Size = new Size(323, 44);
-            label2.TabIndex = 5;
-            label2.Text = "'All Your Students'";
+            label2.Size = new Size(339, 44);
+            label2.TabIndex = 6;
+            label2.Text = "'All Your Residents'";
             // 
-            // addStudentBtn
+            // pictureBox1
             // 
-            addStudentBtn.BackColor = Color.Black;
-            addStudentBtn.ForeColor = Color.White;
-            addStudentBtn.Location = new Point(41, 278);
-            addStudentBtn.Name = "addStudentBtn";
-            addStudentBtn.Size = new Size(332, 51);
-            addStudentBtn.TabIndex = 14;
-            addStudentBtn.Text = "Affect Student";
-            addStudentBtn.UseVisualStyleBackColor = false;
-            addStudentBtn.Click += addStudentBtn_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(49, 95);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(378, 241);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 33;
+            pictureBox1.TabStop = false;
             // 
             // button2
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(86, 355);
+            button2.Location = new Point(78, 358);
             button2.Name = "button2";
-            button2.Size = new Size(244, 51);
-            button2.TabIndex = 27;
-            button2.Text = "Delete Student";
+            button2.Size = new Size(307, 51);
+            button2.TabIndex = 32;
+            button2.Text = "Delete Resident";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // button1
+            // addStudentBtn
             // 
-            button1.BackColor = Color.Black;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(41, 438);
-            button1.Name = "button1";
-            button1.Size = new Size(332, 51);
-            button1.TabIndex = 28;
-            button1.Text = "Our Residents";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            addStudentBtn.BackColor = Color.Black;
+            addStudentBtn.ForeColor = Color.White;
+            addStudentBtn.Location = new Point(117, 427);
+            addStudentBtn.Name = "addStudentBtn";
+            addStudentBtn.Size = new Size(235, 51);
+            addStudentBtn.TabIndex = 31;
+            addStudentBtn.Text = "Refresh";
+            addStudentBtn.UseVisualStyleBackColor = false;
+            addStudentBtn.Click += addStudentBtn_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(12, 3);
+            button3.Location = new Point(12, 12);
             button3.Name = "button3";
             button3.Size = new Size(40, 27);
-            button3.TabIndex = 29;
+            button3.TabIndex = 34;
             button3.Text = "<";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(41, 53);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(343, 206);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 30;
-            pictureBox1.TabStop = false;
-            // 
-            // DisplayStud
+            // CheckResd
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1119, 588);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1135, 595);
             Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(addStudentBtn);
             Controls.Add(label2);
             Controls.Add(dataGridViewBuildings);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
-            Name = "DisplayStud";
-            Text = "DisplayStud";
-            Load += DisplayStud_Load;
+            Name = "CheckResd";
+            Text = "CheckResd";
+            Load += CheckResd_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -144,10 +130,9 @@
 
         private DataGridView dataGridViewBuildings;
         private Label label2;
-        private Button addStudentBtn;
-        private Button button2;
-        private Button button1;
-        private Button button3;
         private PictureBox pictureBox1;
+        private Button button2;
+        private Button addStudentBtn;
+        private Button button3;
     }
 }
