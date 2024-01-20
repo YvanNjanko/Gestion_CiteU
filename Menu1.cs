@@ -69,7 +69,9 @@ namespace FrontEnd_Gestion_CiteU
 
         private void GoToAssStdBtn_Click(object sender, EventArgs e)
         {
-
+            DisplayStud MenuForm = new DisplayStud();
+            MenuForm.Show();
+            this.Hide();
         }
 
         private void GoToCheckStBtn_Click(object sender, EventArgs e)

@@ -438,11 +438,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(35, 12);
+            label5.Location = new Point(17, 12);
             label5.Name = "label5";
-            label5.Size = new Size(141, 23);
+            label5.Size = new Size(174, 23);
             label5.TabIndex = 22;
-            label5.Text = "Save Student";
+            label5.Text = "Manage Student";
             // 
             // GoToSaveStdBtn
             // 

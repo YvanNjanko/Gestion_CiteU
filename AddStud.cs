@@ -128,6 +128,9 @@ namespace FrontEnd_Gestion_CiteU
         {
             try
             {
+                // Ouvrir la connexion à la base de données
+                connection.Open();
+
                 // Demander le matricule de l'étudiant à supprimer
                 string matriculeToDelete = Interaction.InputBox("Entrez le matricule de l'étudiant à supprimer:", "Supprimer un étudiant", "");
 
@@ -158,7 +161,21 @@ namespace FrontEnd_Gestion_CiteU
             {
                 MessageBox.Show("Erreur lors de la suppression de l'étudiant : " + ex.Message);
             }
+            finally
+            {
+                // Fermer la connexion à la base de données dans le bloc finally
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DisplayStud affiche = new DisplayStud();
+            affiche.Show();
+            this.Hide();
+        }
     }
 }

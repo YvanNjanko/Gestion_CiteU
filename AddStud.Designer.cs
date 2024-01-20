@@ -46,8 +46,9 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             splitContainer1 = new SplitContainer();
-            checkBox1 = new CheckBox();
             button2 = new Button();
+            checkBox1 = new CheckBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -69,7 +70,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(463, 106);
+            pictureBox2.Location = new Point(472, 62);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(457, 289);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -223,6 +224,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button3);
             splitContainer1.Panel2.Controls.Add(button2);
             splitContainer1.Panel2.Controls.Add(checkBox1);
             splitContainer1.Panel2.Controls.Add(button1);
@@ -244,17 +246,6 @@
             splitContainer1.SplitterDistance = 199;
             splitContainer1.TabIndex = 1;
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.White;
-            checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(911, 539);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(18, 17);
-            checkBox1.TabIndex = 25;
-            checkBox1.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             button2.BackColor = Color.Black;
@@ -266,6 +257,29 @@
             button2.Text = "Delete Student";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.White;
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(911, 539);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(18, 17);
+            checkBox1.TabIndex = 25;
+            checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Black;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(539, 367);
+            button3.Name = "button3";
+            button3.Size = new Size(332, 51);
+            button3.TabIndex = 27;
+            button3.Text = "Display Student";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // AddStud
             // 
@@ -309,5 +323,6 @@
         private SplitContainer splitContainer1;
         private CheckBox checkBox1;
         private Button button2;
+        private Button button3;
     }
 }
