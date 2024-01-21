@@ -36,7 +36,6 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            label1 = new Label();
             addStudentBtn = new Button();
             enterNiveau = new TextBox();
             enterMat = new TextBox();
@@ -44,17 +43,17 @@
             enterSex = new TextBox();
             EnterName = new TextBox();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
             splitContainer1 = new SplitContainer();
             button3 = new Button();
             button2 = new Button();
             checkBox1 = new CheckBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -121,17 +120,6 @@
             label3.Size = new Size(151, 21);
             label3.TabIndex = 14;
             label3.Text = "Noms Et Prenoms";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(51, 15);
-            label1.Name = "label1";
-            label1.Size = new Size(80, 23);
-            label1.TabIndex = 3;
-            label1.Text = "Gestion";
             // 
             // addStudentBtn
             // 
@@ -200,16 +188,6 @@
             label2.TabIndex = 2;
             label2.Text = "Add New Student";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 42);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
@@ -219,8 +197,7 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.Black;
-            splitContainer1.Panel1.Controls.Add(label1);
-            splitContainer1.Panel1.Controls.Add(pictureBox1);
+            splitContainer1.Panel1.Controls.Add(pictureBox3);
             // 
             // splitContainer1.Panel2
             // 
@@ -281,6 +258,16 @@
             checkBox1.TabIndex = 25;
             checkBox1.UseVisualStyleBackColor = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(12, 154);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(161, 210);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 28;
+            pictureBox3.TabStop = false;
+            // 
             // AddStud
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -294,13 +281,12 @@
             Name = "AddStud";
             Text = "AddStud";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -313,7 +299,6 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private Label label1;
         private Button addStudentBtn;
         private TextBox enterNiveau;
         private TextBox enterMat;
@@ -321,10 +306,10 @@
         private TextBox enterSex;
         private TextBox EnterName;
         private Label label2;
-        private PictureBox pictureBox1;
         private SplitContainer splitContainer1;
         private CheckBox checkBox1;
         private Button button2;
         private Button button3;
+        private PictureBox pictureBox3;
     }
 }

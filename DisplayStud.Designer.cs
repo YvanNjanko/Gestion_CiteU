@@ -36,8 +36,10 @@
             button1 = new Button();
             button3 = new Button();
             pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewBuildings
@@ -117,12 +119,24 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1069, 38);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(28, 31);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 36;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
             // DisplayStud
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1119, 588);
+            Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
             Controls.Add(button1);
@@ -137,6 +151,7 @@
             Load += DisplayStud_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,5 +165,6 @@
         private Button button1;
         private Button button3;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
     }
 }

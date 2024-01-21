@@ -43,18 +43,18 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(528, 83);
+            dataGridViewBuildings.Location = new Point(545, 78);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(507, 404);
+            dataGridViewBuildings.Size = new Size(484, 404);
             dataGridViewBuildings.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(600, 31);
+            label2.Location = new Point(628, 31);
             label2.Name = "label2";
             label2.Size = new Size(339, 44);
             label2.TabIndex = 6;
@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(49, 95);
+            pictureBox1.Location = new Point(81, 88);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(378, 241);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -74,7 +74,7 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(78, 358);
+            button2.Location = new Point(110, 351);
             button2.Name = "button2";
             button2.Size = new Size(307, 51);
             button2.TabIndex = 32;
@@ -86,7 +86,7 @@
             // 
             addStudentBtn.BackColor = Color.Black;
             addStudentBtn.ForeColor = Color.White;
-            addStudentBtn.Location = new Point(117, 427);
+            addStudentBtn.Location = new Point(149, 420);
             addStudentBtn.Name = "addStudentBtn";
             addStudentBtn.Size = new Size(235, 51);
             addStudentBtn.TabIndex = 31;

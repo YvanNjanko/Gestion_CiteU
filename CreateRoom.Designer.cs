@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateRoom));
             splitContainer1 = new SplitContainer();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
             label4 = new Label();
@@ -45,7 +44,7 @@
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -58,8 +57,7 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.Black;
-            splitContainer1.Panel1.Controls.Add(label1);
-            splitContainer1.Panel1.Controls.Add(pictureBox1);
+            splitContainer1.Panel1.Controls.Add(pictureBox3);
             // 
             // splitContainer1.Panel2
             // 
@@ -76,26 +74,15 @@
             splitContainer1.SplitterDistance = 209;
             splitContainer1.TabIndex = 0;
             // 
-            // label1
+            // pictureBox3
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(77, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(80, 23);
-            label1.TabIndex = 7;
-            label1.Text = "Gestion";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(33, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 49);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(22, 144);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(161, 233);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 29;
+            pictureBox3.TabStop = false;
             // 
             // button2
             // 
@@ -201,12 +188,11 @@
             Name = "CreateRoom";
             Text = "CreateRoom";
             splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -214,8 +200,6 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private Label label1;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Button createRoomBtn;
         private TextBox enterEtage;
@@ -225,5 +209,6 @@
         private Label label3;
         private Button button1;
         private Button button2;
+        private PictureBox pictureBox3;
     }
 }

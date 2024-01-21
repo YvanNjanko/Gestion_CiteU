@@ -431,5 +431,62 @@ namespace FrontEnd_Gestion_CiteU
             MenuForm.Show();
             this.Hide();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ouvrir la connexion à la base de données
+                connection.Open();
+
+                // Demander le matricule de l'étudiant
+                string matriculeToDisplay = Interaction.InputBox("Entrez le matricule de l'étudiant à afficher:", "Afficher les informations d'un étudiant", "");
+
+                // Vérifier si le matricule existe dans la base de données
+                string checkMatriculeQuery = "SELECT COUNT(*) FROM etudiant WHERE Matricule = @matricule";
+                MySqlCommand checkMatriculeCmd = new MySqlCommand(checkMatriculeQuery, connection);
+                checkMatriculeCmd.Parameters.AddWithValue("@matricule", matriculeToDisplay);
+
+                int countMatricule = Convert.ToInt32(checkMatriculeCmd.ExecuteScalar());
+
+                if (countMatricule > 0)
+                {
+                    // Matricule trouvé, récupérer toutes les informations de l'étudiant
+                    string getStudentInfoQuery = "SELECT * FROM etudiant WHERE Matricule = @matricule";
+                    MySqlCommand getStudentInfoCmd = new MySqlCommand(getStudentInfoQuery, connection);
+                    getStudentInfoCmd.Parameters.AddWithValue("@matricule", matriculeToDisplay);
+
+                    // Utiliser un adaptateur de données pour remplir un DataSet
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(getStudentInfoCmd);
+                    DataSet dataSet = new DataSet();
+                    adapter.Fill(dataSet, "Etudiant");
+
+                    // Afficher les données dans le DataGridView
+                    dataGridViewBuildings.DataSource = dataSet.Tables["Etudiant"];
+                }
+                else
+                {
+                    MessageBox.Show("Aucun étudiant trouvé avec le matricule spécifié.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'affichage des informations de l'étudiant : " + ex.Message);
+            }
+            finally
+            {
+                // Fermer la connexion à la base de données
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
 }
