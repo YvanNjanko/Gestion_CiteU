@@ -54,11 +54,15 @@ namespace FrontEnd_Gestion_CiteU
                 labelTotalRevenue.Text = "Chiffre d'affaires de la cité : " + totalRevenue + " FCFA";
 
 
-                // 5. Les gains (somme des prix des chambres occupées)
-                string totalGainsQuery = "SELECT SUM(PrixChambre) FROM Batiment INNER JOIN Chambre ON Batiment.Code = Chambre.BatimentCode INNER JOIN Resident ON Chambre.Code = Resident.CodeChambre";
+                // 5. Les gains (somme des prix des chambres occupées multiplié par le nombre de mois)
+                string totalGainsQuery = "SELECT SUM(PrixChambre * Resident.NbreMoisLocation) " +
+                                         "FROM Batiment " +
+                                         "INNER JOIN Chambre ON Batiment.Code = Chambre.BatimentCode " +
+                                         "INNER JOIN Resident ON Chambre.Code = Resident.CodeChambre";
                 MySqlCommand totalGainsCmd = new MySqlCommand(totalGainsQuery, connection);
                 decimal totalGains = Convert.ToDecimal(totalGainsCmd.ExecuteScalar());
                 labelTotalGains2.Text = "Gains (chambres occupées) : " + totalGains + " FCFA";
+
 
                 // 6. Le nombre total de Residents dans la base de données
                 string countTotalRQuery = "SELECT COUNT(*) FROM resident";
