@@ -95,7 +95,9 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Info menuForm = new Info();
+            menuForm.Show();
+            this.Hide();
         }
     }
 }

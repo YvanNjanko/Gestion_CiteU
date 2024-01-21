@@ -112,11 +112,11 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(164, 444);
+            button2.Location = new Point(164, 450);
             button2.Name = "button2";
             button2.Size = new Size(189, 38);
             button2.TabIndex = 34;
-            button2.Text = "Your Account";
+            button2.Text = "Manage Account";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 

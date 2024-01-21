@@ -253,9 +253,13 @@ namespace FrontEnd_Gestion_CiteU
                                     {
                                         MessageBox.Show("Un mineur et un majeur ne peuvent pas être dans la même chambre.");
                                     }
-                                    else if (existingResidentNiveauAcademique > 4 && newStudentNiveauAcademique <= 4)
+                                    else if (existingResidentNiveauAcademique >= 4 && newStudentNiveauAcademique < 4)
                                     {
-                                        MessageBox.Show("Un étudiant de niveau académique supérieur à 4 ne peut pas être mis avec un étudiant de niveau 1.");
+                                        MessageBox.Show("Un étudiant de niveau académique supérieur à 4 ne peut pas être mis avec un étudiant de niveau inferieur.");
+                                    }
+                                    else if (existingResidentNiveauAcademique < 4 && newStudentNiveauAcademique >= 4)
+                                    {
+                                        MessageBox.Show("Un étudiant de niveau académique supérieur à 4 ne peut pas être mis avec un étudiant de niveau inferieur.");
                                     }
                                     else
                                     {
