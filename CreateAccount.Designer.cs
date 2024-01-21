@@ -254,6 +254,7 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "CreateAccount";
             Text = "CreateAccount";
             Load += CreateAccount_Load;

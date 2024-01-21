@@ -155,6 +155,7 @@
             Controls.Add(labelTotalBuildings);
             Controls.Add(button1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "CiteStatus";
             Text = "CiteStatus";
             Load += CiteStatus_Load;

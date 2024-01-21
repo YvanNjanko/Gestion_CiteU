@@ -265,6 +265,7 @@
             ClientSize = new Size(1105, 572);
             Controls.Add(splitContainer1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "NewBuild";
             Text = "NewBuild";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

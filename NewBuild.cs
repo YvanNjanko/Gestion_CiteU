@@ -60,14 +60,37 @@ namespace FrontEnd_Gestion_CiteU
         private void CreateBuildingBtn_Click(object sender, EventArgs e)
         {
             // Récupérer les données du formulaire
-            char code = Convert.ToChar(enterCode.Text);
-            int nombreEtages = Convert.ToInt32(enterEtage.Text);
-            int chambresParEtage = Convert.ToInt32(enterRoom.Text);
-            decimal prixChambre = Convert.ToDecimal(enterPrix.Text);
-            int nombreMaxLitsParChambre = Convert.ToInt32(enterBed.Text);
+            char code;
+            if (!char.TryParse(enterCode.Text, out code))
+            {
+                MessageBox.Show("Veuillez entrer un code valide.");
+                return;
+            }
+
+            string etageStr = enterEtage.Text;
+            string roomStr = enterRoom.Text;
+            string prixStr = enterPrix.Text;
+            string bedStr = enterBed.Text;
+
+            // Vérifier si tous les champs sont remplis
+            if (string.IsNullOrEmpty(etageStr) || string.IsNullOrEmpty(roomStr) || string.IsNullOrEmpty(prixStr) || string.IsNullOrEmpty(bedStr))
+            {
+                MessageBox.Show("Veuillez remplir tous les champs du formulaire.");
+                return; // Arrêter le traitement si un champ n'est pas rempli
+            }
 
             try
             {
+                // Convertir les valeurs numériques
+                if (!int.TryParse(etageStr, out int nombreEtages) ||
+                    !int.TryParse(roomStr, out int chambresParEtage) ||
+                    !decimal.TryParse(prixStr, out decimal prixChambre) ||
+                    !int.TryParse(bedStr, out int nombreMaxLitsParChambre))
+                {
+                    MessageBox.Show("Veuillez entrer des valeurs numériques valides.");
+                    return; // Arrêter le traitement si une valeur n'est pas valide
+                }
+
                 // Ouvrir la connexion à la base de données
                 connection.Open();
 
@@ -122,9 +145,13 @@ namespace FrontEnd_Gestion_CiteU
             finally
             {
                 // Fermer la connexion à la base de données
-                connection.Close();
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
             }
         }
+
 
     }
 }

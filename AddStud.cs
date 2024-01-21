@@ -72,15 +72,29 @@ namespace FrontEnd_Gestion_CiteU
             // Récupérer les informations du formulaire
             string nom = EnterName.Text;
             string matricule = enterMat.Text;
-            int niveauAcademique = Convert.ToInt32(enterNiveau.Text);
+            string niveauAcademiqueStr = enterNiveau.Text;
             string sexe = enterSex.Text;
-            int age = Convert.ToInt32(enterAge.Text);
+            string ageStr = enterAge.Text;
             bool handicap = checkBox1.Checked;
+
+            // Vérifier si tous les champs sont remplis
+            if (string.IsNullOrEmpty(nom) || string.IsNullOrEmpty(matricule) || string.IsNullOrEmpty(niveauAcademiqueStr) || string.IsNullOrEmpty(sexe) || string.IsNullOrEmpty(ageStr))
+            {
+                MessageBox.Show("Veuillez remplir tous les champs du formulaire.");
+                return; // Arrêter le traitement si un champ n'est pas rempli
+            }
 
             try
             {
                 // Ouvrir la connexion à la base de données
                 connection.Open();
+
+                // Convertir les valeurs numériques
+                if (!int.TryParse(niveauAcademiqueStr, out int niveauAcademique) || !int.TryParse(ageStr, out int age))
+                {
+                    MessageBox.Show("Veuillez entrer des valeurs numériques valides pour le niveau académique et l'âge.");
+                    return; // Arrêter le traitement si les valeurs ne sont pas valides
+                }
 
                 // Demander si l'étudiant est handicapé (vous pouvez personnaliser la boîte de dialogue selon vos besoins)
                 DialogResult result = MessageBox.Show("L'étudiant est-il handicapé?", "Handicap", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -115,9 +129,13 @@ namespace FrontEnd_Gestion_CiteU
             finally
             {
                 // Fermer la connexion à la base de données
-                connection.Close();
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
             }
         }
+
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {

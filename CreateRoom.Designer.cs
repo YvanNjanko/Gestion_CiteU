@@ -197,6 +197,7 @@
             ClientSize = new Size(1096, 556);
             Controls.Add(splitContainer1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "CreateRoom";
             Text = "CreateRoom";
             splitContainer1.Panel1.ResumeLayout(false);

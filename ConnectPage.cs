@@ -18,24 +18,24 @@ namespace FrontEnd_Gestion_CiteU
         private void Form1_Load(object sender, EventArgs e)
         {
             // Initialise la connexion à la base de données
-           /* connection = new MySqlConnection(connectionString);
+            /* connection = new MySqlConnection(connectionString);
 
-            try
-            {
-                // Ouvre la connexion à la base de données
-                connection.Open();
-                MessageBox.Show("Connexion à la base de données réussie.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur de connexion à la base de données : " + ex.Message);
-            }
-            finally
-            {
-                // Ferme la connexion, assurez-vous de la fermer lorsque vous n'en avez plus besoin
-                connection.Close();
-            }
-           */
+             try
+             {
+                 // Ouvre la connexion à la base de données
+                 connection.Open();
+                 MessageBox.Show("Connexion à la base de données réussie.");
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Erreur de connexion à la base de données : " + ex.Message);
+             }
+             finally
+             {
+                 // Ferme la connexion, assurez-vous de la fermer lorsque vous n'en avez plus besoin
+                 connection.Close();
+             }
+            */
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

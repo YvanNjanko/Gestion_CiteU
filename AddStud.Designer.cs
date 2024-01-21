@@ -46,9 +46,9 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             splitContainer1 = new SplitContainer();
+            button3 = new Button();
             button2 = new Button();
             checkBox1 = new CheckBox();
-            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -246,6 +246,18 @@
             splitContainer1.SplitterDistance = 199;
             splitContainer1.TabIndex = 1;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Black;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(539, 367);
+            button3.Name = "button3";
+            button3.Size = new Size(332, 51);
+            button3.TabIndex = 27;
+            button3.Text = "Display Student";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // button2
             // 
             button2.BackColor = Color.Black;
@@ -269,18 +281,6 @@
             checkBox1.TabIndex = 25;
             checkBox1.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Black;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(539, 367);
-            button3.Name = "button3";
-            button3.Size = new Size(332, 51);
-            button3.TabIndex = 27;
-            button3.Text = "Display Student";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // AddStud
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -289,6 +289,8 @@
             ClientSize = new Size(1135, 559);
             Controls.Add(splitContainer1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddStud";
             Text = "AddStud";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

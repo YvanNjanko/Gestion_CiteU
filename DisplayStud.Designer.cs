@@ -131,6 +131,7 @@
             Controls.Add(label2);
             Controls.Add(dataGridViewBuildings);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "DisplayStud";
             Text = "DisplayStud";
             Load += DisplayStud_Load;

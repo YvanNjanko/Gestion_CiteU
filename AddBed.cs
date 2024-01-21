@@ -40,78 +40,81 @@ namespace FrontEnd_Gestion_CiteU
             // Récupérer le code de la chambre entré
             string codeChambre = enterCode.Text;
 
-            if (!string.IsNullOrEmpty(codeChambre))
+            if (string.IsNullOrEmpty(codeChambre))
             {
-                try
+                MessageBox.Show("Veuillez entrer le code de la chambre.");
+                return; // Arrêter le traitement si le champ n'est pas rempli
+            }
+
+            try
+            {
+                // Ouvrir la connexion à la base de données
+                connection.Open();
+
+                // Vérifier si la chambre existe dans la base de données
+                string checkChambreQuery = "SELECT COUNT(*) FROM Chambre WHERE Code = @codeChambre";
+                MySqlCommand checkChambreCmd = new MySqlCommand(checkChambreQuery, connection);
+                checkChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+
+                int countChambre = Convert.ToInt32(checkChambreCmd.ExecuteScalar());
+
+                if (countChambre > 0)
                 {
-                    // Ouvrir la connexion à la base de données
-                    connection.Open();
+                    // La chambre existe, obtenir le nombre de lits occupés et le nombre maximum de lits par chambre du bâtiment associé
+                    string getChambreInfoQuery = "SELECT NombreLits, BatimentCode FROM Chambre WHERE Code = @codeChambre";
+                    MySqlCommand getChambreInfoCmd = new MySqlCommand(getChambreInfoQuery, connection);
+                    getChambreInfoCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
 
-                    // Vérifier si la chambre existe dans la base de données
-                    string checkChambreQuery = "SELECT COUNT(*) FROM Chambre WHERE Code = @codeChambre";
-                    MySqlCommand checkChambreCmd = new MySqlCommand(checkChambreQuery, connection);
-                    checkChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+                    string getBatChambreInfoQuery = "SELECT BatimentCode FROM Chambre WHERE Code = @codeChambre";
+                    MySqlCommand getBatChambreInfoCmd = new MySqlCommand(getBatChambreInfoQuery, connection);
+                    getBatChambreInfoCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
 
-                    int countChambre = Convert.ToInt32(checkChambreCmd.ExecuteScalar());
+                    int nombreLits = Convert.ToInt32(getChambreInfoCmd.ExecuteScalar());
+                    string batimentCode = Convert.ToString(getBatChambreInfoCmd.ExecuteScalar());
 
-                    if (countChambre > 0)
+                    // Récupérer le nombre maximum de lits par chambre du bâtiment
+                    string getMaxLitsQuery = "SELECT NombreMaxLitsParChambre FROM Batiment WHERE Code = @batimentCode";
+                    MySqlCommand getMaxLitsCmd = new MySqlCommand(getMaxLitsQuery, connection);
+                    getMaxLitsCmd.Parameters.AddWithValue("@batimentCode", batimentCode);
+
+                    int nombreMaxLits = Convert.ToInt32(getMaxLitsCmd.ExecuteScalar());
+
+                    // Vérifier si le nombre de lits est inférieur au nombre maximum de lits
+                    if (nombreLits < nombreMaxLits)
                     {
-                        // La chambre existe, obtenir le nombre de lits occupés et le nombre maximum de lits par chambre du bâtiment associé
-                        string getChambreInfoQuery = "SELECT NombreLits, BatimentCode FROM Chambre WHERE Code = @codeChambre";
-                        MySqlCommand getChambreInfoCmd = new MySqlCommand(getChambreInfoQuery, connection);
-                        getChambreInfoCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+                        // Ajouter un lit à la chambre
+                        string addBedQuery = "UPDATE Chambre SET NombreLits = NombreLits + 1 WHERE Code = @codeChambre";
+                        MySqlCommand addBedCmd = new MySqlCommand(addBedQuery, connection);
+                        addBedCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
 
-                        string getBatChambreInfoQuery = "SELECT BatimentCode FROM Chambre WHERE Code = @codeChambre";
-                        MySqlCommand getBatChambreInfoCmd = new MySqlCommand(getBatChambreInfoQuery, connection);
-                        getBatChambreInfoCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+                        addBedCmd.ExecuteNonQuery();
 
-
-                        int nombreLits = Convert.ToInt32(getChambreInfoCmd.ExecuteScalar());
-                        string batimentCode = Convert.ToString(getBatChambreInfoCmd.ExecuteScalar());
-
-                        // Récupérer le nombre maximum de lits par chambre du bâtiment
-                        string getMaxLitsQuery = "SELECT NombreMaxLitsParChambre FROM Batiment WHERE Code = @batimentCode";
-                        MySqlCommand getMaxLitsCmd = new MySqlCommand(getMaxLitsQuery, connection);
-                        getMaxLitsCmd.Parameters.AddWithValue("@batimentCode", batimentCode);
-
-                        int nombreMaxLits = Convert.ToInt32(getMaxLitsCmd.ExecuteScalar());
-
-                        // Vérifier si le nombre de lits est inférieur au nombre maximum de lits
-                        if (nombreLits < nombreMaxLits)
-                        {
-                            // Ajouter un lit à la chambre
-                            string addBedQuery = "UPDATE Chambre SET NombreLits = NombreLits + 1 WHERE Code = @codeChambre";
-                            MySqlCommand addBedCmd = new MySqlCommand(addBedQuery, connection);
-                            addBedCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
-
-                            addBedCmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Lit ajouté à la chambre avec succès.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("La chambre a atteint le nombre maximum de lits.");
-                        }
+                        MessageBox.Show("Lit ajouté à la chambre avec succès.");
                     }
                     else
                     {
-                        MessageBox.Show("Aucune chambre trouvée avec le code spécifié.");
+                        MessageBox.Show("La chambre a atteint le nombre maximum de lits.");
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Erreur lors de l'ajout de lit à la chambre : " + ex.Message);
+                    MessageBox.Show("Aucune chambre trouvée avec le code spécifié.");
                 }
-                finally
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'ajout de lit à la chambre : " + ex.Message);
+            }
+            finally
+            {
+                // Fermer la connexion à la base de données
+                if (connection.State == ConnectionState.Open)
                 {
-                    // Fermer la connexion à la base de données
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        connection.Close();
-                    }
+                    connection.Close();
                 }
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -177,5 +180,9 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
+        private void AddBed_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -117,6 +117,7 @@
             Controls.Add(label2);
             Controls.Add(dataGridViewBuildings);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "CheckResd";
             Text = "CheckResd";
             Load += CheckResd_Load;

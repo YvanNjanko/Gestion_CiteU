@@ -219,6 +219,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ConnectPage";
             Text = "ConnectPage";
             Load += Form1_Load;

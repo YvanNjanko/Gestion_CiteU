@@ -119,6 +119,8 @@
             Controls.Add(button1);
             Controls.Add(dataGridViewBuildings);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "BuildInfoForm";
             Text = "BuildInfoForm";
             Load += BuildInfoForm_Load;
