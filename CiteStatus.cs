@@ -83,5 +83,10 @@ namespace FrontEnd_Gestion_CiteU
             menuForm.Show();
             this.Hide();
         }
+
+        private void labelTotalGains2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

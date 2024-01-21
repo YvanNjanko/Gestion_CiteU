@@ -56,7 +56,7 @@ namespace FrontEnd_Gestion_CiteU
         private void createRoomBtn_Click(object sender, EventArgs e)
         {
             // Récupérer les informations du formulaire
-            string codeBatiment = "A"; // Remplacez cela par la logique pour récupérer le code du bâtiment depuis votre formulaire
+            string codeBatiment = enterCode.Text;
             int numeroEtage = Convert.ToInt32(enterEtage.Text);
 
             try

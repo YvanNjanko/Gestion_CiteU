@@ -57,45 +57,46 @@
             labelTotalBuildings.AutoSize = true;
             labelTotalBuildings.Location = new Point(70, 121);
             labelTotalBuildings.Name = "labelTotalBuildings";
-            labelTotalBuildings.Size = new Size(60, 21);
+            labelTotalBuildings.Size = new Size(164, 21);
             labelTotalBuildings.TabIndex = 28;
-            labelTotalBuildings.Text = "label1";
+            labelTotalBuildings.Text = "Nombre Batiments";
             // 
             // labelTotalRevenue
             // 
             labelTotalRevenue.AutoSize = true;
             labelTotalRevenue.Location = new Point(70, 290);
             labelTotalRevenue.Name = "labelTotalRevenue";
-            labelTotalRevenue.Size = new Size(60, 21);
+            labelTotalRevenue.Size = new Size(137, 21);
             labelTotalRevenue.TabIndex = 29;
-            labelTotalRevenue.Text = "label1";
+            labelTotalRevenue.Text = "Chiffre d'Affaire";
             // 
             // labelOccupiedRooms
             // 
             labelOccupiedRooms.AutoSize = true;
             labelOccupiedRooms.Location = new Point(70, 235);
             labelOccupiedRooms.Name = "labelOccupiedRooms";
-            labelOccupiedRooms.Size = new Size(60, 21);
+            labelOccupiedRooms.Size = new Size(285, 21);
             labelOccupiedRooms.TabIndex = 30;
-            labelOccupiedRooms.Text = "label1";
+            labelOccupiedRooms.Text = "Nombre Chambre(s) Occupee(s)";
             // 
             // labelTotalRooms
             // 
             labelTotalRooms.AutoSize = true;
             labelTotalRooms.Location = new Point(70, 179);
             labelTotalRooms.Name = "labelTotalRooms";
-            labelTotalRooms.Size = new Size(60, 21);
+            labelTotalRooms.Size = new Size(235, 21);
             labelTotalRooms.TabIndex = 31;
-            labelTotalRooms.Text = "label1";
+            labelTotalRooms.Text = "Nombre Total de Chambre";
             // 
             // labelTotalGains2
             // 
             labelTotalGains2.AutoSize = true;
             labelTotalGains2.Location = new Point(70, 345);
             labelTotalGains2.Name = "labelTotalGains2";
-            labelTotalGains2.Size = new Size(60, 21);
+            labelTotalGains2.Size = new Size(132, 21);
             labelTotalGains2.TabIndex = 32;
-            labelTotalGains2.Text = "label1";
+            labelTotalGains2.Text = "Gains Cumules";
+            labelTotalGains2.Click += labelTotalGains2_Click;
             // 
             // pictureBox1
             // 
@@ -123,9 +124,9 @@
             labelTotalR.AutoSize = true;
             labelTotalR.Location = new Point(70, 403);
             labelTotalR.Name = "labelTotalR";
-            labelTotalR.Size = new Size(60, 21);
+            labelTotalR.Size = new Size(200, 21);
             labelTotalR.TabIndex = 35;
-            labelTotalR.Text = "label1";
+            labelTotalR.Text = "Nombre de Resident(s)";
             // 
             // label2
             // 
