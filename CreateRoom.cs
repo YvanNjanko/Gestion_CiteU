@@ -96,10 +96,57 @@ namespace FrontEnd_Gestion_CiteU
 
                     if (numeroEtage <= nombreEtagesBatiment)
                     {
-                        // Reste du code inchangé...
-                        // ...
+                        // Compter le nombre de chambres pour cet étage
+                        string countChambresQuery = "SELECT COUNT(*) FROM Chambre WHERE NumeroEtage = @numeroEtage AND BatimentCode = @batimentCode";
+                        MySqlCommand countChambresCmd = new MySqlCommand(countChambresQuery, connection);
+                        countChambresCmd.Parameters.AddWithValue("@numeroEtage", numeroEtage);
+                        countChambresCmd.Parameters.AddWithValue("@batimentCode", codeBatiment);
 
-                        MessageBox.Show("Chambre ajoutée avec succès.");
+                        int nombreChambres = Convert.ToInt32(countChambresCmd.ExecuteScalar());
+
+                        // Récupérer le nombre de chambres par étage du bâtiment
+                        string getChambresParEtageQuery = "SELECT ChambresParEtage FROM Batiment WHERE Code = @codeBatiment";
+                        MySqlCommand getChambresParEtageCmd = new MySqlCommand(getChambresParEtageQuery, connection);
+                        getChambresParEtageCmd.Parameters.AddWithValue("@codeBatiment", codeBatiment);
+
+                        // Récupérer le nombre de lits par chambre
+                        string getLitQuery = "SELECT NombreMaxLitsParChambre FROM Batiment WHERE Code = @codeBatiment";
+                        MySqlCommand getLitCmd = new MySqlCommand(getLitQuery, connection);
+                        getLitCmd.Parameters.AddWithValue("@codeBatiment", codeBatiment);
+
+                        int chambresParEtage = Convert.ToInt32(getChambresParEtageCmd.ExecuteScalar());
+                        int nbreLits = Convert.ToInt32(getLitCmd.ExecuteScalar());
+                        int NombreLitsOccupes = 0;
+
+                        if (nombreChambres < chambresParEtage)
+                        {
+                            int tentative = 1;
+                            string codeChambre = $"{numeroEtage}{codeBatiment}{tentative}";
+
+                            // Vérifier si le code de la chambre existe déjà
+                            while (ChambreExists(codeChambre))
+                            {
+                                tentative++;
+                                codeChambre = $"{numeroEtage}{codeBatiment}{nombreChambres + tentative}";
+                            }
+
+                            // Ajouter une nouvelle chambre
+                            string insertChambreQuery = "INSERT INTO Chambre (Code, NumeroEtage, BatimentCode, NombreLitsOccupes, NombreLits) VALUES (@codeChambre, @numeroEtage, @batimentCode, @NombreLitsOccupes,@NombreLits)";
+                            MySqlCommand insertChambreCmd = new MySqlCommand(insertChambreQuery, connection);
+                            insertChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+                            insertChambreCmd.Parameters.AddWithValue("@numeroEtage", numeroEtage);
+                            insertChambreCmd.Parameters.AddWithValue("@batimentCode", codeBatiment);
+                            insertChambreCmd.Parameters.AddWithValue("@NombreLitsOccupes", NombreLitsOccupes);
+                            insertChambreCmd.Parameters.AddWithValue("@NombreLits", nbreLits);
+
+                            insertChambreCmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Chambre ajoutée avec succès.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Le nombre maximum de chambres à cet étage a été atteint.");
+                        }
                     }
                     else
                     {
