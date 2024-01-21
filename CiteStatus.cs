@@ -92,5 +92,10 @@ namespace FrontEnd_Gestion_CiteU
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

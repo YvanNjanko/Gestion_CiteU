@@ -90,5 +90,69 @@ namespace FrontEnd_Gestion_CiteU
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Récupérer le code de la chambre à partir du TextBox
+            string chambreCode = textBox1.Text.Trim();
+
+            // Vérifier si le code de la chambre est renseigné
+            if (!string.IsNullOrEmpty(chambreCode))
+            {
+                // Utiliser la chaîne de connexion pour établir une connexion à la base de données
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        // Utiliser une commande SQL pour récupérer les informations de la chambre et du résident associé
+                        string query = "SELECT C.*, R.MatriculeEtudiant, E.Nom, E.Sexe " +
+                                       "FROM Chambre C " +
+                                       "LEFT JOIN Resident R ON C.Code = R.CodeChambre " +
+                                       "LEFT JOIN Etudiant E ON R.MatriculeEtudiant = E.Matricule " +
+                                       "WHERE C.Code = @chambreCode";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@chambreCode", chambreCode);
+
+                        // Utiliser un adaptateur pour remplir un DataSet avec les résultats de la requête
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Chambres");
+
+                        // Liaison du DataGridView avec le DataSet
+                        dataGridViewBuildings.DataSource = dataSet.Tables["Chambres"];
+
+                        // Vérifier si des données ont été trouvées
+                        if (dataSet.Tables["Chambres"].Rows.Count == 0)
+                        {
+                            MessageBox.Show("Aucune chambre trouvée avec le code spécifié.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erreur lors de la récupération des données : " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Fermer la connexion à la base de données
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez entrer le code de la chambre.");
+            }
+        }
+
     }
 }

@@ -118,6 +118,7 @@
             button2.TabIndex = 34;
             button2.Text = "Your Account";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // labelTotalR
             // 
