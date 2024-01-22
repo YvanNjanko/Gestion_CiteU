@@ -267,37 +267,52 @@ namespace FrontEnd_Gestion_CiteU
                                         // Vérifier si l'étudiant est handicapé
                                         bool handicap = GetStudentHandicapStatus(matricule);
 
-                                        // Si l'étudiant est handicapé, vérifier l'étage de la chambre
-                                        if (handicap)
-                                        {
-                                            int numeroEtage = GetChambreNumeroEtage(codeChambre);
 
-                                            // Vérifier si la chambre est au rez-de-chaussée (étage 0)
-                                            if (numeroEtage == 0)
+                                        // vérifier si l'étudiant est déjà résident de cette chambre
+                                        string checkResidentQuery = "SELECT COUNT(*) FROM Resident WHERE MatriculeEtudiant = @matricule AND CodeChambre = @codeChambre";
+                                        MySqlCommand checkResidentCmd = new MySqlCommand(checkResidentQuery, connection);
+                                        checkResidentCmd.Parameters.AddWithValue("@matricule", matricule);
+                                        checkResidentCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+
+                                        int countResident = Convert.ToInt32(checkResidentCmd.ExecuteScalar());
+
+                                        if (countResident == 0) {
+
+                                            // Si l'étudiant est handicapé, vérifier l'étage de la chambre
+                                            if (handicap)
+                                            {
+                                                int numeroEtage = GetChambreNumeroEtage(codeChambre);
+
+                                                // Vérifier si la chambre est au rez-de-chaussée (étage 0)
+                                                if (numeroEtage == 0)
+                                                {
+                                                    // Chambre vide, ajouter le résident à la table Resident
+                                                    AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
+
+                                                    MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
+
+                                                    // Mettre à jour le nombre de lits occupés dans la table Chambre
+                                                    UpdateLitsOccupes(codeChambre);
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("Un étudiant handicapé ne peut être affecté qu'à une chambre du rez-de-chaussée.");
+                                                }
+                                            }
+                                            else
                                             {
                                                 // Chambre vide, ajouter le résident à la table Resident
                                                 AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
-
                                                 MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
 
                                                 // Mettre à jour le nombre de lits occupés dans la table Chambre
                                                 UpdateLitsOccupes(codeChambre);
                                             }
-                                            else
-                                            {
-                                                MessageBox.Show("Un étudiant handicapé ne peut être affecté qu'à une chambre du rez-de-chaussée.");
-                                            }
                                         }
                                         else
                                         {
-                                            // Chambre vide, ajouter le résident à la table Resident
-                                            AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
-                                            MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
-
-                                            // Mettre à jour le nombre de lits occupés dans la table Chambre
-                                            UpdateLitsOccupes(codeChambre);
+                                            MessageBox.Show("Cet étudiant est déjà résident de la chambre spécifiée.");
                                         }
-
 
                                     }
                                 }
