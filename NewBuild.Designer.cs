@@ -220,6 +220,7 @@
             splitContainer1.Panel2.Controls.Add(enterCode);
             splitContainer1.Panel2.Controls.Add(pictureBox3);
             splitContainer1.Panel2.Controls.Add(label2);
+            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(1105, 572);
             splitContainer1.SplitterDistance = 206;
             splitContainer1.TabIndex = 1;

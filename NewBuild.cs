@@ -13,7 +13,6 @@ namespace FrontEnd_Gestion_CiteU
 {
     public partial class NewBuild : Form
     {
-        // Assurez-vous d'avoir une connexion à la base de données définie à l'échelle de la classe
         private MySqlConnection connection;
         private string connectionString = "Server=localhost;Database=bdcite;User ID=root;Password=;";
 
@@ -152,6 +151,9 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

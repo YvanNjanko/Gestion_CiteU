@@ -269,7 +269,7 @@ namespace FrontEnd_Gestion_CiteU
 
 
                                         // vérifier si l'étudiant est déjà résident de cette chambre
-                                        string checkResidentQuery = "SELECT COUNT(*) FROM Resident WHERE MatriculeEtudiant = @matricule AND CodeChambre = @codeChambre";
+                                        string checkResidentQuery = "SELECT COUNT(*) FROM Resident WHERE MatriculeEtudiant = @matricule";
                                         MySqlCommand checkResidentCmd = new MySqlCommand(checkResidentQuery, connection);
                                         checkResidentCmd.Parameters.AddWithValue("@matricule", matricule);
                                         checkResidentCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
@@ -311,7 +311,7 @@ namespace FrontEnd_Gestion_CiteU
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Cet étudiant est déjà résident de la chambre spécifiée.");
+                                            MessageBox.Show("Cet étudiant est déjà résident de la cite.");
                                         }
 
                                     }
