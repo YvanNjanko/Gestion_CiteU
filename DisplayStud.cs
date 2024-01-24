@@ -97,8 +97,6 @@ namespace FrontEnd_Gestion_CiteU
 
                     MessageBox.Show("Étudiant supprimé avec succès de la base de données.");
 
-                    // Recharger les données après la suppression
-                    LoadStudentData();
                 }
                 else
                 {
@@ -276,7 +274,8 @@ namespace FrontEnd_Gestion_CiteU
 
                                         int countResident = Convert.ToInt32(checkResidentCmd.ExecuteScalar());
 
-                                        if (countResident == 0) {
+                                        if (countResident == 0)
+                                        {
 
                                             // Si l'étudiant est handicapé, vérifier l'étage de la chambre
                                             if (handicap)
@@ -507,5 +506,9 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadStudentData();
+        }
     }
 }

@@ -100,8 +100,7 @@ namespace FrontEnd_Gestion_CiteU
 
                     MessageBox.Show("Bâtiment, chambres et résidents associés supprimés avec succès.");
 
-                    // Rafraîchir les données affichées dans le DataGridView
-                    LoadBuildingData();
+                   
                 }
                 catch (Exception ex)
                 {
@@ -115,6 +114,9 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadBuildingData();
+        }
     }
 }

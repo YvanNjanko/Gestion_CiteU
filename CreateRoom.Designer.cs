@@ -70,6 +70,7 @@
             splitContainer1.Panel2.Controls.Add(enterEtage);
             splitContainer1.Panel2.Controls.Add(enterCode);
             splitContainer1.Panel2.Controls.Add(label2);
+            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(1096, 556);
             splitContainer1.SplitterDistance = 209;
             splitContainer1.TabIndex = 0;

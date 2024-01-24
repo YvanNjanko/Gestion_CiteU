@@ -14,7 +14,6 @@ namespace FrontEnd_Gestion_CiteU
 {
     public partial class CheckRoom : Form
     {
-        // Assurez-vous de remplacer "VotreChaineDeConnexion" par votre propre chaîne de connexion
         private string connectionString = "Server=localhost;Database=bdcite;User ID=root;Password=;";
 
         public CheckRoom()

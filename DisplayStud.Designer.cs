@@ -37,6 +37,7 @@
             button3 = new Button();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -130,12 +131,25 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Black;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(651, 510);
+            button4.Name = "button4";
+            button4.Size = new Size(235, 51);
+            button4.TabIndex = 37;
+            button4.Text = "Refresh";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // DisplayStud
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1119, 588);
+            Controls.Add(button4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
@@ -166,5 +180,6 @@
         private Button button3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
+        private Button button4;
     }
 }

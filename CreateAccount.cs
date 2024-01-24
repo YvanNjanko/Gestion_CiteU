@@ -71,17 +71,14 @@ namespace FrontEnd_Gestion_CiteU
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Ajouter du code si nécessaire
         }
 
         private void CreateAccount_Load(object sender, EventArgs e)
         {
-            // Ajouter du code si nécessaire
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Ajouter du code si nécessaire
         }
     }
 }

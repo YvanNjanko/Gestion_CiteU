@@ -35,6 +35,7 @@
             button3 = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(381, 94);
+            dataGridViewBuildings.Location = new Point(382, 74);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
@@ -65,9 +66,9 @@
             button2.BackColor = Color.Black;
             button2.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(83, 321);
+            button2.Location = new Point(65, 320);
             button2.Name = "button2";
-            button2.Size = new Size(222, 60);
+            button2.Size = new Size(271, 60);
             button2.TabIndex = 26;
             button2.Text = "Create New Building";
             button2.UseVisualStyleBackColor = false;
@@ -78,7 +79,7 @@
             button3.BackColor = Color.Black;
             button3.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(83, 403);
+            button3.Location = new Point(90, 396);
             button3.Name = "button3";
             button3.Size = new Size(222, 60);
             button3.TabIndex = 27;
@@ -100,11 +101,23 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18.2686558F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(496, 26);
+            label2.Location = new Point(497, 6);
             label2.Name = "label2";
             label2.Size = new Size(392, 40);
             label2.TabIndex = 29;
             label2.Text = "Manage Your Buildings";
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Black;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(609, 496);
+            button4.Name = "button4";
+            button4.Size = new Size(235, 51);
+            button4.TabIndex = 38;
+            button4.Text = "Refresh";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // BuildInfoForm
             // 
@@ -112,6 +125,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1085, 577);
+            Controls.Add(button4);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
@@ -138,5 +152,6 @@
         private Button button3;
         private PictureBox pictureBox1;
         private Label label2;
+        private Button button4;
     }
 }
