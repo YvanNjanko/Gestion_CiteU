@@ -63,6 +63,7 @@
             pictureBox4 = new PictureBox();
             label9 = new Label();
             button8 = new Button();
+            button3 = new Button();
             contextMenuStrip1.SuspendLayout();
             toolStripContainer1.ContentPanel.SuspendLayout();
             toolStripContainer1.SuspendLayout();
@@ -490,12 +491,23 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(1065, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(40, 27);
+            button3.TabIndex = 35;
+            button3.Text = ">";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Menu1
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1117, 578);
+            Controls.Add(button3);
             Controls.Add(button8);
             Controls.Add(label9);
             Controls.Add(toolStripContainer7);

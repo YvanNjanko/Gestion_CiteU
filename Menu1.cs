@@ -102,5 +102,12 @@ namespace FrontEnd_Gestion_CiteU
             MenuForm.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Menu2 MenuForm = new Menu2();
+            MenuForm.Show();
+            this.Hide();
+        }
     }
 }

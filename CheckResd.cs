@@ -62,8 +62,6 @@ namespace FrontEnd_Gestion_CiteU
                     updateNombreLitsCmd.Parameters.AddWithValue("@chambreCode", chambreCode);
                     updateNombreLitsCmd.ExecuteNonQuery();
 
-                    // Rafraîchir les données affichées dans le DataGridView
-                    LoadResidentsData();
                 }
                 catch (Exception ex)
                 {
