@@ -57,7 +57,7 @@ namespace FrontEnd_Gestion_CiteU
                     MessageBox.Show("Résident supprimé avec succès.");
 
                     // Mettre à jour le nombre de lits de la chambre dans la table Chambre
-                    string updateNombreLitsQuery = "UPDATE Chambre SET NombreLits = NombreLits + 1 WHERE Code = @chambreCode";
+                    string updateNombreLitsQuery = "UPDATE Chambre SET NombreLitsOccupes = NombreLitsOccupes - 1 WHERE Code = @chambreCode";
                     MySqlCommand updateNombreLitsCmd = new MySqlCommand(updateNombreLitsQuery, connection);
                     updateNombreLitsCmd.Parameters.AddWithValue("@chambreCode", chambreCode);
                     updateNombreLitsCmd.ExecuteNonQuery();

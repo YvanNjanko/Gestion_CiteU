@@ -280,6 +280,7 @@
             Controls.Add(button1);
             Controls.Add(pictureBox8);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Menu2";
             Text = "Menu2";
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

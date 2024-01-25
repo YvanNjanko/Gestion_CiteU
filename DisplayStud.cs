@@ -212,6 +212,9 @@ namespace FrontEnd_Gestion_CiteU
 
                                             // Mettre à jour le nombre de lits occupés dans la table Chambre
                                             UpdateLitsOccupes(codeChambre);
+
+                                            AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                            MessageBox.Show("Paiment introduit.");
                                         }
                                         else
                                         {
@@ -227,6 +230,9 @@ namespace FrontEnd_Gestion_CiteU
 
                                         // Mettre à jour le nombre de lits occupés dans la table Chambre
                                         UpdateLitsOccupes(codeChambre);
+
+                                        AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                        MessageBox.Show("Paiment introduit.");
                                     }
                                 }
                                 else
@@ -292,6 +298,9 @@ namespace FrontEnd_Gestion_CiteU
 
                                                     // Mettre à jour le nombre de lits occupés dans la table Chambre
                                                     UpdateLitsOccupes(codeChambre);
+
+                                                    AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                                    MessageBox.Show("Paiment introduit.");
                                                 }
                                                 else
                                                 {
@@ -306,6 +315,9 @@ namespace FrontEnd_Gestion_CiteU
 
                                                 // Mettre à jour le nombre de lits occupés dans la table Chambre
                                                 UpdateLitsOccupes(codeChambre);
+
+                                                AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                                MessageBox.Show("Paiment introduit.");
                                             }
                                         }
                                         else
@@ -362,6 +374,33 @@ namespace FrontEnd_Gestion_CiteU
 
             addResidentCmd.ExecuteNonQuery();
         }
+
+        private void AddPaie(string matricule, string codeChambre, int nombreMoisLocation)
+        {
+            bool statu = false;
+
+            // Récupérer le prix de la chambre depuis la table batiment
+            string getPrixChambreQuery = "SELECT PrixChambre FROM batiment WHERE Code = (SELECT BatimentCode FROM Chambre WHERE Code = @codeChambre)";
+            MySqlCommand getPrixChambreCmd = new MySqlCommand(getPrixChambreQuery, connection);
+            getPrixChambreCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+
+            // Exécuter la commande pour obtenir le prix de la chambre
+            int prixChambre = Convert.ToInt32(getPrixChambreCmd.ExecuteScalar());
+
+            // Ajouter les informations de paiement à la table paiement
+            string addPaymentQuery = "INSERT INTO paiment (MatriculeEtudiant, CodeChambre, NbreMoisLocation, PrixChambre, statu) VALUES (@matricule, @codeChambre, @nombreMoisLocation, @prixChambre, @statu)";
+            MySqlCommand addPaymentCmd = new MySqlCommand(addPaymentQuery, connection);
+            addPaymentCmd.Parameters.AddWithValue("@matricule", matricule);
+            addPaymentCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
+            addPaymentCmd.Parameters.AddWithValue("@nombreMoisLocation", nombreMoisLocation);
+            addPaymentCmd.Parameters.AddWithValue("@prixChambre", prixChambre);
+            addPaymentCmd.Parameters.AddWithValue("@statu", statu);
+
+            // Exécuter la commande pour ajouter le paiement
+            addPaymentCmd.ExecuteNonQuery();
+        }
+
+
 
         private void UpdateLitsOccupes(string codeChambre)
         {
