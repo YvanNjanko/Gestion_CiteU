@@ -99,5 +99,10 @@ namespace FrontEnd_Gestion_CiteU
             menuForm.Show();
             this.Hide();
         }
+
+        private void labelTotalBuildings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

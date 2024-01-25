@@ -60,6 +60,7 @@
             labelTotalBuildings.Size = new Size(164, 21);
             labelTotalBuildings.TabIndex = 28;
             labelTotalBuildings.Text = "Nombre Batiments";
+            labelTotalBuildings.Click += labelTotalBuildings_Click;
             // 
             // labelTotalRevenue
             // 

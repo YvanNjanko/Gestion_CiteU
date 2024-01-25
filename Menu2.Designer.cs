@@ -172,6 +172,7 @@
             button4.TabIndex = 52;
             button4.Text = "Continue";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // pictureBox4
             // 
