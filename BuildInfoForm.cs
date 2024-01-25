@@ -55,7 +55,7 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu1 menu = new Menu1();
+            Menu2 menu = new Menu2();
             menu.Show();
             this.Hide();
         }

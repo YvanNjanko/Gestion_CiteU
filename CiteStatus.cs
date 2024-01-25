@@ -83,7 +83,7 @@ namespace FrontEnd_Gestion_CiteU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu1 menuForm = new Menu1();
+            Menu2 menuForm = new Menu2();
             menuForm.Show();
             this.Hide();
         }
