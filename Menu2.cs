@@ -17,14 +17,44 @@ namespace FrontEnd_Gestion_CiteU
             InitializeComponent();
         }
 
-        private void Menu2_Load(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+            Menu1 MenuForm = new Menu1();
+            MenuForm.Show();
+            this.Hide();
         }
 
-        private void GoToCreateBuilBtn_Click(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
+        {
+            ConnectPage MenuForm = new ConnectPage();
+            MenuForm.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BuildInfoForm BuildForm = new BuildInfoForm();
+            BuildForm.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CheckRoom Form = new CheckRoom();
+            Form.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             CiteStatus MenuForm = new CiteStatus();
+            MenuForm.Show();
+            this.Hide();
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+            ConnectPage MenuForm = new ConnectPage();
             MenuForm.Show();
             this.Hide();
         }

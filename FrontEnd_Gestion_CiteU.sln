@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontEnd_Gestion_CiteU", "F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{A31CCBB2-662F-49B9-AB74-0063767C491C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CU Management", "..\CU Management\CU Management.vdproj", "{E1C6A6EF-42CC-4034-AFBE-0B2F44993C49}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +17,6 @@ Global
 		{21F879E7-D409-4EBB-A444-6741AD05275C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F879E7-D409-4EBB-A444-6741AD05275C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F879E7-D409-4EBB-A444-6741AD05275C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1C6A6EF-42CC-4034-AFBE-0B2F44993C49}.Debug|Any CPU.ActiveCfg = Debug
-		{E1C6A6EF-42CC-4034-AFBE-0B2F44993C49}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
