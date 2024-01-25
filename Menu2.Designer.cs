@@ -203,6 +203,7 @@
             button5.TabIndex = 49;
             button5.Text = "Continue";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // pictureBox5
             // 

@@ -92,7 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(103, 50);
+            label2.Location = new Point(113, 67);
             label2.Name = "label2";
             label2.Size = new Size(402, 44);
             label2.TabIndex = 4;
@@ -110,7 +110,7 @@
             toolStripContainer1.ContentPanel.Size = new Size(186, 137);
             toolStripContainer1.ContentPanel.Load += toolStripContainer1_ContentPanel_Load_1;
             toolStripContainer1.LeftToolStripPanelVisible = false;
-            toolStripContainer1.Location = new Point(11, 134);
+            toolStripContainer1.Location = new Point(21, 151);
             toolStripContainer1.Name = "toolStripContainer1";
             toolStripContainer1.RightToolStripPanelVisible = false;
             toolStripContainer1.Size = new Size(186, 137);
@@ -161,7 +161,7 @@
             toolStripContainer2.ContentPanel.Controls.Add(pictureBox5);
             toolStripContainer2.ContentPanel.Size = new Size(185, 137);
             toolStripContainer2.LeftToolStripPanelVisible = false;
-            toolStripContainer2.Location = new Point(90, 301);
+            toolStripContainer2.Location = new Point(100, 318);
             toolStripContainer2.Name = "toolStripContainer2";
             toolStripContainer2.RightToolStripPanelVisible = false;
             toolStripContainer2.Size = new Size(185, 137);
@@ -213,7 +213,7 @@
             toolStripContainer3.ContentPanel.Controls.Add(pictureBox2);
             toolStripContainer3.ContentPanel.Size = new Size(190, 137);
             toolStripContainer3.LeftToolStripPanelVisible = false;
-            toolStripContainer3.Location = new Point(201, 134);
+            toolStripContainer3.Location = new Point(211, 151);
             toolStripContainer3.Name = "toolStripContainer3";
             toolStripContainer3.RightToolStripPanelVisible = false;
             toolStripContainer3.Size = new Size(190, 137);
@@ -264,7 +264,7 @@
             toolStripContainer5.ContentPanel.Controls.Add(pictureBox3);
             toolStripContainer5.ContentPanel.Size = new Size(178, 137);
             toolStripContainer5.LeftToolStripPanelVisible = false;
-            toolStripContainer5.Location = new Point(397, 134);
+            toolStripContainer5.Location = new Point(407, 151);
             toolStripContainer5.Name = "toolStripContainer5";
             toolStripContainer5.RightToolStripPanelVisible = false;
             toolStripContainer5.Size = new Size(178, 137);
@@ -315,7 +315,7 @@
             toolStripContainer7.ContentPanel.Controls.Add(pictureBox4);
             toolStripContainer7.ContentPanel.Size = new Size(189, 137);
             toolStripContainer7.LeftToolStripPanelVisible = false;
-            toolStripContainer7.Location = new Point(298, 301);
+            toolStripContainer7.Location = new Point(308, 318);
             toolStripContainer7.Name = "toolStripContainer7";
             toolStripContainer7.RightToolStripPanelVisible = false;
             toolStripContainer7.Size = new Size(189, 137);

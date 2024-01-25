@@ -58,5 +58,12 @@ namespace FrontEnd_Gestion_CiteU
             MenuForm.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ManagePay MenuForm = new ManagePay();
+            MenuForm.Show();
+            this.Hide();
+        }
     }
 }
