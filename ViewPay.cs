@@ -70,40 +70,15 @@ namespace FrontEnd_Gestion_CiteU
 
         private void labelTotalGains2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Ouvrir la connexion à la base de données
-                connection.Open();
-
-                // Compter le nombre de lignes de la table paiment où statu est égale à true
-                string countQuery = "SELECT COUNT(*) FROM paiment WHERE statu = true";
-                MySqlCommand countCmd = new MySqlCommand(countQuery, connection);
-
-                // Obtenir le nombre de lignes
-                int rowCount = Convert.ToInt32(countCmd.ExecuteScalar());
-
-                // Afficher le nombre de lignes dans le label
-                labelTotalGains2.Text = "Nombre de paiements validés : " + rowCount.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur lors du calcul du nombre de paiements validés : " + ex.Message);
-            }
-            finally
-            {
-                // Fermer la connexion à la base de données
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
+           
         }
 
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+           
         }
+
 
         private void ShowCiteInformation()
         {
@@ -117,6 +92,25 @@ namespace FrontEnd_Gestion_CiteU
                 MySqlCommand countBuildingsCmd = new MySqlCommand(countQuery, connection);
                 int totalBuildings = Convert.ToInt32(countBuildingsCmd.ExecuteScalar());
                 labelTotalGains2.Text = "Nombre de paiements validés : " + totalBuildings;
+
+                // 1. Le gain
+                // Calculer la somme des produits NbreMoisLocation * PrixChambre pour les enregistrements où statu = true
+                string getTotalGainsQuery = "SELECT SUM(NbreMoisLocation * PrixChambre) FROM paiment WHERE statu = true";
+                MySqlCommand getTotalGainsCmd = new MySqlCommand(getTotalGainsQuery, connection);
+
+                // Exécuter la commande et récupérer le résultat
+                object totalGainsObject = getTotalGainsCmd.ExecuteScalar();
+
+                if (totalGainsObject != null && totalGainsObject != DBNull.Value)
+                {
+                    // Afficher le résultat dans le label
+                    label1.Text = "Gains cumulés : " + totalGainsObject.ToString() + " FCFA";
+                }
+                else
+                {
+                    // Si la somme est nulle, afficher un message approprié
+                    label1.Text = "Aucun gain cumulé pour le moment.";
+                }
 
             }
             catch (Exception ex)

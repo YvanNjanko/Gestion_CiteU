@@ -55,14 +55,23 @@ namespace FrontEnd_Gestion_CiteU
 
 
                 // 5. Les gains (somme des prix des chambres occupées multiplié par le nombre de mois)
-                string totalGainsQuery = "SELECT SUM(PrixChambre * Resident.NbreMoisLocation) " +
-                                         "FROM Batiment " +
-                                         "INNER JOIN Chambre ON Batiment.Code = Chambre.BatimentCode " +
-                                         "INNER JOIN Resident ON Chambre.Code = Resident.CodeChambre";
-                MySqlCommand totalGainsCmd = new MySqlCommand(totalGainsQuery, connection);
-                decimal totalGains = Convert.ToDecimal(totalGainsCmd.ExecuteScalar());
-                labelTotalGains2.Text = "Gains (chambres occupées) : " + totalGains + " FCFA";
+                // Calculer la somme des produits NbreMoisLocation * PrixChambre pour les enregistrements où statu = true
+                string getTotalGainsQuery = "SELECT SUM(NbreMoisLocation * PrixChambre) FROM paiment WHERE statu = true";
+                MySqlCommand getTotalGainsCmd = new MySqlCommand(getTotalGainsQuery, connection);
 
+                // Exécuter la commande et récupérer le résultat
+                object totalGainsObject = getTotalGainsCmd.ExecuteScalar();
+
+                if (totalGainsObject != null && totalGainsObject != DBNull.Value)
+                {
+                    // Afficher le résultat dans le label
+                    labelTotalGains2.Text = "Gains cumulés : " + totalGainsObject.ToString() + " FCFA";
+                }
+                else
+                {
+                    // Si la somme est nulle, afficher un message approprié
+                    labelTotalGains2.Text = "Aucun gain cumulé pour le moment.";
+                }
 
                 // 6. Le nombre total de Residents dans la base de données
                 string countTotalRQuery = "SELECT COUNT(*) FROM resident";
