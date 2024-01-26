@@ -70,13 +70,13 @@ namespace FrontEnd_Gestion_CiteU
 
         private void labelTotalGains2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
 

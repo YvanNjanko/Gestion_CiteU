@@ -114,5 +114,12 @@ namespace FrontEnd_Gestion_CiteU
         {
 
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Settings MenuForm = new Settings();
+            MenuForm.Show();
+            this.Hide();
+        }
     }
 }

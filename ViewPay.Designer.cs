@@ -35,6 +35,7 @@
             labelTotalGains2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuildings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -102,12 +103,20 @@
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(34, 62);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(279, 28);
+            dateTimePicker1.TabIndex = 61;
+            // 
             // ViewPay
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1101, 565);
+            Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(labelTotalGains2);
@@ -115,6 +124,7 @@
             Controls.Add(label2);
             Controls.Add(dataGridViewBuildings);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ViewPay";
             Text = "ViewPay";
             Load += ViewPay_Load;
@@ -132,5 +142,6 @@
         private Label labelTotalGains2;
         private Label label1;
         private PictureBox pictureBox1;
+        private DateTimePicker dateTimePicker1;
     }
 }

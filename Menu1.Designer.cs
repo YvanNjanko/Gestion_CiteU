@@ -56,6 +56,7 @@
             label9 = new Label();
             button3 = new Button();
             pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
             contextMenuStrip1.SuspendLayout();
             toolStripContainer1.ContentPanel.SuspendLayout();
             toolStripContainer1.SuspendLayout();
@@ -73,6 +74,7 @@
             toolStripContainer7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -385,12 +387,24 @@
             pictureBox6.TabIndex = 36;
             pictureBox6.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(-9, -3);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(54, 42);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 37;
+            pictureBox7.TabStop = false;
+            pictureBox7.Click += pictureBox7_Click;
+            // 
             // Menu1
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1117, 578);
+            Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(button3);
             Controls.Add(label9);
@@ -432,6 +446,7 @@
             toolStripContainer7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -468,5 +483,7 @@
         private Button GoToSaveStdBtn;
         private Label label9;
         private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private DateTimePicker dateTimePicker1;
     }
 }
