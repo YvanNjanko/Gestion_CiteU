@@ -71,16 +71,16 @@
             splitContainer1.Panel2.Controls.Add(enterCode);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
-            splitContainer1.Size = new Size(1096, 556);
-            splitContainer1.SplitterDistance = 209;
+            splitContainer1.Size = new Size(1210, 652);
+            splitContainer1.SplitterDistance = 230;
             splitContainer1.TabIndex = 0;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(22, 144);
+            pictureBox3.Location = new Point(32, 183);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(161, 233);
+            pictureBox3.Size = new Size(161, 218);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 29;
             pictureBox3.TabStop = false;
@@ -89,9 +89,9 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(107, 408);
+            button2.Location = new Point(128, 459);
             button2.Name = "button2";
-            button2.Size = new Size(268, 54);
+            button2.Size = new Size(240, 54);
             button2.TabIndex = 26;
             button2.Text = "Delete Room";
             button2.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(14, 34);
+            button1.Location = new Point(3, 12);
             button1.Name = "button1";
             button1.Size = new Size(40, 27);
             button1.TabIndex = 25;
@@ -110,7 +110,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(46, 215);
+            label4.Location = new Point(59, 254);
             label4.Name = "label4";
             label4.Size = new Size(60, 21);
             label4.TabIndex = 10;
@@ -119,7 +119,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(46, 120);
+            label3.Location = new Point(59, 159);
             label3.Name = "label3";
             label3.Size = new Size(58, 21);
             label3.TabIndex = 9;
@@ -128,9 +128,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(479, 106);
+            pictureBox2.Location = new Point(503, 106);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(370, 356);
+            pictureBox2.Size = new Size(452, 438);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
@@ -139,9 +139,9 @@
             // 
             createRoomBtn.BackColor = Color.Black;
             createRoomBtn.ForeColor = Color.White;
-            createRoomBtn.Location = new Point(107, 329);
+            createRoomBtn.Location = new Point(105, 380);
             createRoomBtn.Name = "createRoomBtn";
-            createRoomBtn.Size = new Size(268, 54);
+            createRoomBtn.Size = new Size(285, 54);
             createRoomBtn.TabIndex = 7;
             createRoomBtn.Text = "Create";
             createRoomBtn.UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@
             // 
             // enterEtage
             // 
-            enterEtage.Location = new Point(46, 239);
+            enterEtage.Location = new Point(59, 278);
             enterEtage.Multiline = true;
             enterEtage.Name = "enterEtage";
             enterEtage.PlaceholderText = "Entrez le numero de l'etage";
@@ -159,7 +159,7 @@
             // 
             // enterCode
             // 
-            enterCode.Location = new Point(46, 144);
+            enterCode.Location = new Point(59, 183);
             enterCode.Multiline = true;
             enterCode.Name = "enterCode";
             enterCode.PlaceholderText = "Entrez le code du batiment";
@@ -171,7 +171,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(240, 26);
+            label2.Location = new Point(297, 34);
             label2.Name = "label2";
             label2.Size = new Size(351, 44);
             label2.TabIndex = 4;
@@ -182,7 +182,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1096, 556);
+            ClientSize = new Size(1210, 652);
             Controls.Add(splitContainer1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;

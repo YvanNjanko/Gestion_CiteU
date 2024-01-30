@@ -48,7 +48,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(551, 26);
+            label2.Location = new Point(629, 59);
             label2.Name = "label2";
             label2.Size = new Size(420, 44);
             label2.TabIndex = 8;
@@ -58,11 +58,11 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(395, 86);
+            dataGridViewBuildings.Location = new Point(473, 119);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(719, 404);
+            dataGridViewBuildings.Size = new Size(721, 407);
             dataGridViewBuildings.TabIndex = 7;
             // 
             // button6
@@ -79,7 +79,7 @@
             // 
             button1.BackColor = Color.Black;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(58, 436);
+            button1.Location = new Point(85, 475);
             button1.Name = "button1";
             button1.Size = new Size(294, 51);
             button1.TabIndex = 59;
@@ -91,7 +91,7 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(88, 367);
+            button2.Location = new Point(115, 406);
             button2.Name = "button2";
             button2.Size = new Size(227, 51);
             button2.TabIndex = 58;
@@ -103,7 +103,7 @@
             // 
             addStudentBtn.BackColor = Color.Black;
             addStudentBtn.ForeColor = Color.White;
-            addStudentBtn.Location = new Point(58, 296);
+            addStudentBtn.Location = new Point(85, 335);
             addStudentBtn.Name = "addStudentBtn";
             addStudentBtn.Size = new Size(294, 51);
             addStudentBtn.TabIndex = 57;
@@ -114,9 +114,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 45);
+            pictureBox1.Location = new Point(49, 68);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(345, 228);
+            pictureBox1.Size = new Size(369, 261);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
@@ -125,9 +125,9 @@
             // 
             button4.BackColor = Color.Black;
             button4.ForeColor = Color.White;
-            button4.Location = new Point(667, 509);
+            button4.Location = new Point(745, 542);
             button4.Name = "button4";
-            button4.Size = new Size(235, 51);
+            button4.Size = new Size(237, 54);
             button4.TabIndex = 61;
             button4.Text = "Refresh";
             button4.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1086, 39);
+            pictureBox3.Location = new Point(1164, 72);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(28, 31);
+            pictureBox3.Size = new Size(30, 34);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 62;
             pictureBox3.TabStop = false;
@@ -148,7 +148,7 @@
             // 
             button3.BackColor = Color.Black;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(88, 504);
+            button3.Location = new Point(115, 543);
             button3.Name = "button3";
             button3.Size = new Size(227, 51);
             button3.TabIndex = 63;
@@ -161,7 +161,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1126, 584);
+            ClientSize = new Size(1215, 661);
             Controls.Add(button3);
             Controls.Add(pictureBox3);
             Controls.Add(button4);

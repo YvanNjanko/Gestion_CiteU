@@ -153,5 +153,9 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

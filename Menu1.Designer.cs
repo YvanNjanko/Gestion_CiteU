@@ -52,11 +52,11 @@
             toolStripContainer7 = new ToolStripContainer();
             label5 = new Label();
             GoToSaveStdBtn = new Button();
-            pictureBox4 = new PictureBox();
             label9 = new Label();
             button3 = new Button();
-            pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox6 = new PictureBox();
             contextMenuStrip1.SuspendLayout();
             toolStripContainer1.ContentPanel.SuspendLayout();
             toolStripContainer1.SuspendLayout();
@@ -72,9 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             toolStripContainer7.ContentPanel.SuspendLayout();
             toolStripContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -93,10 +93,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(113, 67);
+            label2.Font = new Font("Century Gothic", 22.02985F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(148, 67);
             label2.Name = "label2";
-            label2.Size = new Size(402, 44);
+            label2.Size = new Size(452, 50);
             label2.TabIndex = 4;
             label2.Text = "'Simplicity - Efficiency'";
             // 
@@ -109,13 +109,13 @@
             toolStripContainer1.ContentPanel.Controls.Add(label1);
             toolStripContainer1.ContentPanel.Controls.Add(GoToCreateBuilBtn);
             toolStripContainer1.ContentPanel.Controls.Add(pictureBox1);
-            toolStripContainer1.ContentPanel.Size = new Size(186, 137);
+            toolStripContainer1.ContentPanel.Size = new Size(241, 152);
             toolStripContainer1.ContentPanel.Load += toolStripContainer1_ContentPanel_Load_1;
             toolStripContainer1.LeftToolStripPanelVisible = false;
-            toolStripContainer1.Location = new Point(21, 151);
+            toolStripContainer1.Location = new Point(41, 188);
             toolStripContainer1.Name = "toolStripContainer1";
             toolStripContainer1.RightToolStripPanelVisible = false;
-            toolStripContainer1.Size = new Size(186, 137);
+            toolStripContainer1.Size = new Size(241, 152);
             toolStripContainer1.TabIndex = 5;
             toolStripContainer1.Text = "toolStripContainer1";
             toolStripContainer1.TopToolStripPanelVisible = false;
@@ -123,18 +123,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(26, 12);
+            label1.Font = new Font("Century Gothic", 11.8208952F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(18, 12);
             label1.Name = "label1";
-            label1.Size = new Size(158, 23);
+            label1.Size = new Size(177, 25);
             label1.TabIndex = 13;
             label1.Text = "Create Building";
+            label1.Click += label1_Click;
             // 
             // GoToCreateBuilBtn
             // 
             GoToCreateBuilBtn.BackColor = Color.Black;
+            GoToCreateBuilBtn.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             GoToCreateBuilBtn.ForeColor = Color.White;
-            GoToCreateBuilBtn.Location = new Point(48, 103);
+            GoToCreateBuilBtn.Location = new Point(48, 105);
             GoToCreateBuilBtn.Name = "GoToCreateBuilBtn";
             GoToCreateBuilBtn.Size = new Size(109, 34);
             GoToCreateBuilBtn.TabIndex = 12;
@@ -151,6 +153,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // toolStripContainer2
             // 
@@ -161,12 +164,12 @@
             toolStripContainer2.ContentPanel.Controls.Add(label6);
             toolStripContainer2.ContentPanel.Controls.Add(GoToAssStdBtn);
             toolStripContainer2.ContentPanel.Controls.Add(pictureBox5);
-            toolStripContainer2.ContentPanel.Size = new Size(185, 137);
+            toolStripContainer2.ContentPanel.Size = new Size(240, 152);
             toolStripContainer2.LeftToolStripPanelVisible = false;
-            toolStripContainer2.Location = new Point(100, 318);
+            toolStripContainer2.Location = new Point(123, 364);
             toolStripContainer2.Name = "toolStripContainer2";
             toolStripContainer2.RightToolStripPanelVisible = false;
-            toolStripContainer2.Size = new Size(185, 137);
+            toolStripContainer2.Size = new Size(240, 152);
             toolStripContainer2.TabIndex = 6;
             toolStripContainer2.Text = "toolStripContainer2";
             toolStripContainer2.TopToolStripPanelVisible = false;
@@ -174,18 +177,20 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(32, 11);
+            label6.Font = new Font("Century Gothic", 11.8208952F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(17, 12);
             label6.Name = "label6";
-            label6.Size = new Size(150, 23);
+            label6.Size = new Size(167, 25);
             label6.TabIndex = 25;
             label6.Text = "Assign Student";
+            label6.Click += label6_Click;
             // 
             // GoToAssStdBtn
             // 
             GoToAssStdBtn.BackColor = Color.Black;
+            GoToAssStdBtn.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             GoToAssStdBtn.ForeColor = Color.White;
-            GoToAssStdBtn.Location = new Point(53, 102);
+            GoToAssStdBtn.Location = new Point(53, 104);
             GoToAssStdBtn.Name = "GoToAssStdBtn";
             GoToAssStdBtn.Size = new Size(109, 34);
             GoToAssStdBtn.TabIndex = 24;
@@ -213,12 +218,12 @@
             toolStripContainer3.ContentPanel.Controls.Add(label3);
             toolStripContainer3.ContentPanel.Controls.Add(GoToCreateRoomBtn);
             toolStripContainer3.ContentPanel.Controls.Add(pictureBox2);
-            toolStripContainer3.ContentPanel.Size = new Size(190, 137);
+            toolStripContainer3.ContentPanel.Size = new Size(245, 152);
             toolStripContainer3.LeftToolStripPanelVisible = false;
-            toolStripContainer3.Location = new Point(211, 151);
+            toolStripContainer3.Location = new Point(242, 188);
             toolStripContainer3.Name = "toolStripContainer3";
             toolStripContainer3.RightToolStripPanelVisible = false;
-            toolStripContainer3.Size = new Size(190, 137);
+            toolStripContainer3.Size = new Size(245, 152);
             toolStripContainer3.TabIndex = 7;
             toolStripContainer3.Text = "toolStripContainer3";
             toolStripContainer3.TopToolStripPanelVisible = false;
@@ -226,18 +231,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(32, 12);
+            label3.Font = new Font("Century Gothic", 11.8208952F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(29, 12);
             label3.Name = "label3";
-            label3.Size = new Size(156, 23);
+            label3.Size = new Size(176, 25);
             label3.TabIndex = 16;
             label3.Text = "Manage Room";
+            label3.Click += label3_Click;
             // 
             // GoToCreateRoomBtn
             // 
             GoToCreateRoomBtn.BackColor = Color.Black;
+            GoToCreateRoomBtn.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             GoToCreateRoomBtn.ForeColor = Color.White;
-            GoToCreateRoomBtn.Location = new Point(51, 103);
+            GoToCreateRoomBtn.Location = new Point(51, 105);
             GoToCreateRoomBtn.Name = "GoToCreateRoomBtn";
             GoToCreateRoomBtn.Size = new Size(109, 34);
             GoToCreateRoomBtn.TabIndex = 15;
@@ -254,6 +261,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 14;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // toolStripContainer5
             // 
@@ -264,12 +272,12 @@
             toolStripContainer5.ContentPanel.Controls.Add(label4);
             toolStripContainer5.ContentPanel.Controls.Add(GoToCreateBedBtn);
             toolStripContainer5.ContentPanel.Controls.Add(pictureBox3);
-            toolStripContainer5.ContentPanel.Size = new Size(178, 137);
+            toolStripContainer5.ContentPanel.Size = new Size(233, 152);
             toolStripContainer5.LeftToolStripPanelVisible = false;
-            toolStripContainer5.Location = new Point(407, 151);
+            toolStripContainer5.Location = new Point(453, 188);
             toolStripContainer5.Name = "toolStripContainer5";
             toolStripContainer5.RightToolStripPanelVisible = false;
-            toolStripContainer5.Size = new Size(178, 137);
+            toolStripContainer5.Size = new Size(233, 152);
             toolStripContainer5.TabIndex = 9;
             toolStripContainer5.Text = "toolStripContainer5";
             toolStripContainer5.TopToolStripPanelVisible = false;
@@ -277,18 +285,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(41, 12);
+            label4.Font = new Font("Century Gothic", 11.8208952F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(31, 12);
             label4.Name = "label4";
-            label4.Size = new Size(137, 23);
+            label4.Size = new Size(155, 25);
             label4.TabIndex = 19;
             label4.Text = "Manage Bed";
+            label4.Click += label4_Click;
             // 
             // GoToCreateBedBtn
             // 
             GoToCreateBedBtn.BackColor = Color.Black;
+            GoToCreateBedBtn.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             GoToCreateBedBtn.ForeColor = Color.White;
-            GoToCreateBedBtn.Location = new Point(52, 103);
+            GoToCreateBedBtn.Location = new Point(52, 105);
             GoToCreateBedBtn.Name = "GoToCreateBedBtn";
             GoToCreateBedBtn.Size = new Size(109, 34);
             GoToCreateBedBtn.TabIndex = 18;
@@ -305,6 +315,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // toolStripContainer7
             // 
@@ -315,12 +326,12 @@
             toolStripContainer7.ContentPanel.Controls.Add(label5);
             toolStripContainer7.ContentPanel.Controls.Add(GoToSaveStdBtn);
             toolStripContainer7.ContentPanel.Controls.Add(pictureBox4);
-            toolStripContainer7.ContentPanel.Size = new Size(189, 137);
+            toolStripContainer7.ContentPanel.Size = new Size(244, 152);
             toolStripContainer7.LeftToolStripPanelVisible = false;
-            toolStripContainer7.Location = new Point(308, 318);
+            toolStripContainer7.Location = new Point(331, 364);
             toolStripContainer7.Name = "toolStripContainer7";
             toolStripContainer7.RightToolStripPanelVisible = false;
-            toolStripContainer7.Size = new Size(189, 137);
+            toolStripContainer7.Size = new Size(244, 152);
             toolStripContainer7.TabIndex = 11;
             toolStripContainer7.Text = "toolStripContainer7";
             toolStripContainer7.TopToolStripPanelVisible = false;
@@ -328,24 +339,57 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 10.7462683F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Century Gothic", 11.8208952F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(17, 12);
             label5.Name = "label5";
-            label5.Size = new Size(174, 23);
+            label5.Size = new Size(195, 25);
             label5.TabIndex = 22;
             label5.Text = "Manage Student";
+            label5.Click += label5_Click;
             // 
             // GoToSaveStdBtn
             // 
             GoToSaveStdBtn.BackColor = Color.Black;
+            GoToSaveStdBtn.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             GoToSaveStdBtn.ForeColor = Color.White;
-            GoToSaveStdBtn.Location = new Point(48, 103);
+            GoToSaveStdBtn.Location = new Point(48, 105);
             GoToSaveStdBtn.Name = "GoToSaveStdBtn";
             GoToSaveStdBtn.Size = new Size(109, 34);
             GoToSaveStdBtn.TabIndex = 21;
             GoToSaveStdBtn.Text = "Continue";
             GoToSaveStdBtn.UseVisualStyleBackColor = false;
             GoToSaveStdBtn.Click += GoToSaveStdBtn_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(3, 638);
+            label9.Name = "label9";
+            label9.Size = new Size(92, 21);
+            label9.TabIndex = 12;
+            label9.Text = "Log Out >";
+            label9.Click += label9_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(1175, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(40, 27);
+            button3.TabIndex = 35;
+            button3.Text = ">";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(3, -3);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(54, 42);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 37;
+            pictureBox7.TabStop = false;
+            pictureBox7.Click += pictureBox7_Click;
             // 
             // pictureBox4
             // 
@@ -356,56 +400,26 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 20;
             pictureBox4.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(2, 557);
-            label9.Name = "label9";
-            label9.Size = new Size(92, 21);
-            label9.TabIndex = 12;
-            label9.Text = "Log Out >";
-            label9.Click += label9_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(1065, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(40, 27);
-            button3.TabIndex = 35;
-            button3.Text = ">";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(618, 50);
+            pictureBox6.Location = new Point(696, 67);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(457, 482);
+            pictureBox6.Size = new Size(510, 538);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 36;
+            pictureBox6.TabIndex = 61;
             pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(-9, -3);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(54, 42);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 37;
-            pictureBox7.TabStop = false;
-            pictureBox7.Click += pictureBox7_Click;
             // 
             // Menu1
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1117, 578);
-            Controls.Add(pictureBox7);
+            ClientSize = new Size(1227, 659);
             Controls.Add(pictureBox6);
+            Controls.Add(pictureBox7);
             Controls.Add(button3);
             Controls.Add(label9);
             Controls.Add(toolStripContainer7);
@@ -444,9 +458,9 @@
             toolStripContainer7.ContentPanel.PerformLayout();
             toolStripContainer7.ResumeLayout(false);
             toolStripContainer7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -475,15 +489,15 @@
         private PictureBox pictureBox3;
         private Label label5;
         private Button button4;
-        private PictureBox pictureBox4;
         private Button GoToCreateBuilBtn;
         private Button GoToCreateRoomBtn;
         private Button GoToAssStdBtn;
         private Button GoToCreateBedBtn;
         private Button GoToSaveStdBtn;
         private Label label9;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private DateTimePicker dateTimePicker1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
     }
 }

@@ -44,10 +44,10 @@
             EnterName = new TextBox();
             label2 = new Label();
             splitContainer1 = new SplitContainer();
+            pictureBox3 = new PictureBox();
             button3 = new Button();
             button2 = new Button();
             checkBox1 = new CheckBox();
-            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -69,7 +69,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(472, 62);
+            pictureBox2.Location = new Point(479, 104);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(457, 289);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -79,7 +79,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(65, 354);
+            label7.Location = new Point(72, 396);
             label7.Name = "label7";
             label7.Size = new Size(185, 21);
             label7.TabIndex = 18;
@@ -88,7 +88,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(65, 277);
+            label6.Location = new Point(72, 319);
             label6.Name = "label6";
             label6.Size = new Size(89, 21);
             label6.TabIndex = 17;
@@ -97,7 +97,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(67, 209);
+            label5.Location = new Point(74, 251);
             label5.Name = "label5";
             label5.Size = new Size(45, 21);
             label5.TabIndex = 16;
@@ -106,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(67, 143);
+            label4.Location = new Point(74, 185);
             label4.Name = "label4";
             label4.Size = new Size(48, 21);
             label4.TabIndex = 15;
@@ -115,7 +115,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(67, 78);
+            label3.Location = new Point(74, 120);
             label3.Name = "label3";
             label3.Size = new Size(151, 21);
             label3.TabIndex = 14;
@@ -125,9 +125,9 @@
             // 
             addStudentBtn.BackColor = Color.Black;
             addStudentBtn.ForeColor = Color.White;
-            addStudentBtn.Location = new Point(67, 436);
+            addStudentBtn.Location = new Point(90, 478);
             addStudentBtn.Name = "addStudentBtn";
-            addStudentBtn.Size = new Size(332, 51);
+            addStudentBtn.Size = new Size(279, 51);
             addStudentBtn.TabIndex = 13;
             addStudentBtn.Text = "Add";
             addStudentBtn.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             // 
             // enterNiveau
             // 
-            enterNiveau.Location = new Point(65, 367);
+            enterNiveau.Location = new Point(72, 409);
             enterNiveau.Multiline = true;
             enterNiveau.Name = "enterNiveau";
             enterNiveau.Size = new Size(342, 37);
@@ -144,7 +144,7 @@
             // 
             // enterMat
             // 
-            enterMat.Location = new Point(65, 291);
+            enterMat.Location = new Point(72, 333);
             enterMat.Multiline = true;
             enterMat.Name = "enterMat";
             enterMat.Size = new Size(342, 37);
@@ -153,7 +153,7 @@
             // 
             // enterAge
             // 
-            enterAge.Location = new Point(65, 222);
+            enterAge.Location = new Point(72, 264);
             enterAge.Multiline = true;
             enterAge.Name = "enterAge";
             enterAge.Size = new Size(342, 37);
@@ -162,7 +162,7 @@
             // 
             // enterSex
             // 
-            enterSex.Location = new Point(65, 154);
+            enterSex.Location = new Point(72, 196);
             enterSex.Multiline = true;
             enterSex.Name = "enterSex";
             enterSex.Size = new Size(342, 37);
@@ -171,7 +171,7 @@
             // 
             // EnterName
             // 
-            EnterName.Location = new Point(65, 91);
+            EnterName.Location = new Point(72, 133);
             EnterName.Multiline = true;
             EnterName.Name = "EnterName";
             EnterName.Size = new Size(342, 37);
@@ -182,7 +182,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(273, 15);
+            label2.Location = new Point(305, 26);
             label2.Name = "label2";
             label2.Size = new Size(332, 44);
             label2.TabIndex = 2;
@@ -219,15 +219,25 @@
             splitContainer1.Panel2.Controls.Add(EnterName);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
-            splitContainer1.Size = new Size(1135, 559);
-            splitContainer1.SplitterDistance = 199;
+            splitContainer1.Size = new Size(1174, 622);
+            splitContainer1.SplitterDistance = 205;
             splitContainer1.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(22, 196);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(161, 179);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 28;
+            pictureBox3.TabStop = false;
             // 
             // button3
             // 
             button3.BackColor = Color.Black;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(539, 367);
+            button3.Location = new Point(546, 409);
             button3.Name = "button3";
             button3.Size = new Size(332, 51);
             button3.TabIndex = 27;
@@ -239,9 +249,9 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(539, 436);
+            button2.Location = new Point(583, 478);
             button2.Name = "button2";
-            button2.Size = new Size(332, 51);
+            button2.Size = new Size(248, 51);
             button2.TabIndex = 26;
             button2.Text = "Delete Student";
             button2.UseVisualStyleBackColor = false;
@@ -252,28 +262,18 @@
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.White;
             checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(911, 539);
+            checkBox1.Location = new Point(947, 605);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(18, 17);
             checkBox1.TabIndex = 25;
             checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 154);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(161, 210);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 28;
-            pictureBox3.TabStop = false;
             // 
             // AddStud
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1135, 559);
+            ClientSize = new Size(1174, 622);
             Controls.Add(splitContainer1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;

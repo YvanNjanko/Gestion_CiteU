@@ -26,7 +26,7 @@ namespace FrontEnd_Gestion_CiteU
         private void DisplayIntroductionText()
         {
             // Texte d'introduction
-            string introductionText = "\nCU Management est un logiciel qui vous permettra de gérer aisément l'intégralité d'une cité universitaire, allant de l'attribution\n des chambres aux étudiants suivants des critères précis à la consultation de revenus.\n" +
+            string introductionText = "\n\n\nCU Management est un logiciel qui vous permettra de gérer aisément l'intégralité d'une cité universitaire, allant de l'attribution\n des chambres aux étudiants suivants des critères précis à la consultation de revenus.\n" +
                                       "Vous disposez des fonctionnalités suivantes:\n\n" +
                                       "1- Gestion des bâtiments : création et suppression\n" +
                                       "2- Gestion des chambres : création et suppression\n" +
@@ -37,7 +37,7 @@ namespace FrontEnd_Gestion_CiteU
                                       "7- Gestion des paiements\n" +
                                       "8- Consultation des états (Bâtiments, Chambres, Résidents, Cité Universitaire)\n\n\n" +
 
-                                      "CU Management is a software that will allow you to easily manage the entire university residence, from the allocation of rooms \nto students according to specific criteria to the consultation of income.\n" +
+                                      "CU Management is a software that will allow you to easily manage the entire university residence, from the allocation of rooms \nto students according to specific criteria to the consultation of income.\n\n" +
                                       "1- Building management: creation and deletion \n" +
                                       "2- Room management: creation and deletion \n" +
                                       "3- Bed management: addition and deletion \r\n4- Student management: which allows you to see the list of students waiting for a room\r\n5-Assignment of students which allows according to the validation criteria to assign a student to a room\r\n6- Resident Control: see the history of residents in the Guest Rooms, Removal \r\n7- Payment Management\r\n8- Consultation of the states (Buildings, Rooms, Residents, University Residence) ";

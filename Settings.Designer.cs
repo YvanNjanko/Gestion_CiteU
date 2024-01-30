@@ -37,9 +37,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(906, 452);
+            pictureBox1.Location = new Point(987, 499);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(235, 126);
+            pictureBox1.Size = new Size(232, 151);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 58;
             pictureBox1.TabStop = false;
@@ -59,7 +59,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1098, 578);
+            ClientSize = new Size(1222, 653);
             Controls.Add(button3);
             Controls.Add(pictureBox1);
             Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);

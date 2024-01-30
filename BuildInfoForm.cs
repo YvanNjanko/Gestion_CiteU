@@ -100,7 +100,7 @@ namespace FrontEnd_Gestion_CiteU
 
                     MessageBox.Show("Bâtiment, chambres et résidents associés supprimés avec succès.");
 
-                   
+
                 }
                 catch (Exception ex)
                 {

@@ -55,9 +55,10 @@
             // labelTotalBuildings
             // 
             labelTotalBuildings.AutoSize = true;
-            labelTotalBuildings.Location = new Point(70, 121);
+            labelTotalBuildings.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTotalBuildings.Location = new Point(61, 139);
             labelTotalBuildings.Name = "labelTotalBuildings";
-            labelTotalBuildings.Size = new Size(164, 21);
+            labelTotalBuildings.Size = new Size(178, 22);
             labelTotalBuildings.TabIndex = 28;
             labelTotalBuildings.Text = "Nombre Batiments";
             labelTotalBuildings.Click += labelTotalBuildings_Click;
@@ -65,36 +66,40 @@
             // labelTotalRevenue
             // 
             labelTotalRevenue.AutoSize = true;
-            labelTotalRevenue.Location = new Point(70, 290);
+            labelTotalRevenue.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTotalRevenue.Location = new Point(61, 308);
             labelTotalRevenue.Name = "labelTotalRevenue";
-            labelTotalRevenue.Size = new Size(137, 21);
+            labelTotalRevenue.Size = new Size(153, 22);
             labelTotalRevenue.TabIndex = 29;
             labelTotalRevenue.Text = "Chiffre d'Affaire";
             // 
             // labelOccupiedRooms
             // 
             labelOccupiedRooms.AutoSize = true;
-            labelOccupiedRooms.Location = new Point(70, 235);
+            labelOccupiedRooms.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelOccupiedRooms.Location = new Point(61, 253);
             labelOccupiedRooms.Name = "labelOccupiedRooms";
-            labelOccupiedRooms.Size = new Size(285, 21);
+            labelOccupiedRooms.Size = new Size(314, 22);
             labelOccupiedRooms.TabIndex = 30;
             labelOccupiedRooms.Text = "Nombre Chambre(s) Occupee(s)";
             // 
             // labelTotalRooms
             // 
             labelTotalRooms.AutoSize = true;
-            labelTotalRooms.Location = new Point(70, 179);
+            labelTotalRooms.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTotalRooms.Location = new Point(61, 197);
             labelTotalRooms.Name = "labelTotalRooms";
-            labelTotalRooms.Size = new Size(235, 21);
+            labelTotalRooms.Size = new Size(255, 22);
             labelTotalRooms.TabIndex = 31;
             labelTotalRooms.Text = "Nombre Total de Chambre";
             // 
             // labelTotalGains2
             // 
             labelTotalGains2.AutoSize = true;
-            labelTotalGains2.Location = new Point(70, 345);
+            labelTotalGains2.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTotalGains2.Location = new Point(61, 363);
             labelTotalGains2.Name = "labelTotalGains2";
-            labelTotalGains2.Size = new Size(132, 21);
+            labelTotalGains2.Size = new Size(145, 22);
             labelTotalGains2.TabIndex = 32;
             labelTotalGains2.Text = "Gains Cumules";
             labelTotalGains2.Click += labelTotalGains2_Click;
@@ -102,9 +107,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(558, 43);
+            pictureBox1.Location = new Point(601, 53);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(528, 427);
+            pictureBox1.Size = new Size(574, 466);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;
@@ -113,9 +118,9 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(164, 450);
+            button2.Location = new Point(194, 485);
             button2.Name = "button2";
-            button2.Size = new Size(189, 38);
+            button2.Size = new Size(205, 52);
             button2.TabIndex = 34;
             button2.Text = "Manage Account";
             button2.UseVisualStyleBackColor = false;
@@ -124,9 +129,10 @@
             // labelTotalR
             // 
             labelTotalR.AutoSize = true;
-            labelTotalR.Location = new Point(70, 403);
+            labelTotalR.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTotalR.Location = new Point(61, 421);
             labelTotalR.Name = "labelTotalR";
-            labelTotalR.Size = new Size(200, 21);
+            labelTotalR.Size = new Size(218, 22);
             labelTotalR.TabIndex = 35;
             labelTotalR.Text = "Nombre de Resident(s)";
             // 
@@ -134,7 +140,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18.2686558F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(164, 43);
+            label2.Location = new Point(194, 52);
             label2.Name = "label2";
             label2.Size = new Size(205, 40);
             label2.TabIndex = 36;
@@ -145,7 +151,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1132, 577);
+            ClientSize = new Size(1201, 636);
             Controls.Add(label2);
             Controls.Add(labelTotalR);
             Controls.Add(button2);

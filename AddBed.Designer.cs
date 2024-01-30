@@ -52,7 +52,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(525, 39);
+            pictureBox1.Location = new Point(556, 57);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(565, 487);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -63,7 +63,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(128, 33);
+            label2.Location = new Point(145, 80);
             label2.Name = "label2";
             label2.Size = new Size(281, 44);
             label2.TabIndex = 28;
@@ -72,7 +72,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(99, 165);
+            label3.Location = new Point(103, 217);
             label3.Name = "label3";
             label3.Size = new Size(58, 21);
             label3.TabIndex = 30;
@@ -80,7 +80,7 @@
             // 
             // enterCode
             // 
-            enterCode.Location = new Point(99, 189);
+            enterCode.Location = new Point(103, 241);
             enterCode.Multiline = true;
             enterCode.Name = "enterCode";
             enterCode.PlaceholderText = "Entrez le code de la chambre";
@@ -92,7 +92,7 @@
             // 
             createRoomBtn.BackColor = Color.Black;
             createRoomBtn.ForeColor = Color.White;
-            createRoomBtn.Location = new Point(141, 267);
+            createRoomBtn.Location = new Point(145, 319);
             createRoomBtn.Name = "createRoomBtn";
             createRoomBtn.Size = new Size(268, 54);
             createRoomBtn.TabIndex = 31;
@@ -104,7 +104,7 @@
             // 
             button2.BackColor = Color.Black;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(141, 342);
+            button2.Location = new Point(145, 394);
             button2.Name = "button2";
             button2.Size = new Size(268, 54);
             button2.TabIndex = 33;
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1112, 581);
+            ClientSize = new Size(1165, 625);
             Controls.Add(button2);
             Controls.Add(createRoomBtn);
             Controls.Add(label3);

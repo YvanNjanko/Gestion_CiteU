@@ -44,7 +44,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 19.8805962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(527, 37);
+            label2.Location = new Point(647, 31);
             label2.Name = "label2";
             label2.Size = new Size(391, 44);
             label2.TabIndex = 10;
@@ -54,11 +54,11 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(368, 94);
+            dataGridViewBuildings.Location = new Point(468, 148);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(719, 404);
+            dataGridViewBuildings.Size = new Size(736, 422);
             dataGridViewBuildings.TabIndex = 9;
             // 
             // button6
@@ -75,7 +75,7 @@
             // 
             labelTotalGains2.AutoSize = true;
             labelTotalGains2.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTotalGains2.Location = new Point(14, 108);
+            labelTotalGains2.Location = new Point(34, 127);
             labelTotalGains2.Name = "labelTotalGains2";
             labelTotalGains2.Size = new Size(178, 22);
             labelTotalGains2.TabIndex = 58;
@@ -86,7 +86,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 151);
+            label1.Location = new Point(32, 170);
             label1.Name = "label1";
             label1.Size = new Size(150, 22);
             label1.TabIndex = 59;
@@ -96,16 +96,16 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(14, 213);
+            pictureBox1.Location = new Point(34, 247);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(317, 285);
+            pictureBox1.Size = new Size(345, 305);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(34, 62);
+            dateTimePicker1.Location = new Point(702, 91);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(279, 28);
             dateTimePicker1.TabIndex = 61;
@@ -115,7 +115,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1101, 565);
+            ClientSize = new Size(1216, 660);
             Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
             Controls.Add(label1);

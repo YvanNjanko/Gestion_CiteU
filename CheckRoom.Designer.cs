@@ -52,6 +52,7 @@
             label2.Size = new Size(371, 44);
             label2.TabIndex = 7;
             label2.Text = "'Check Your Rooms'";
+            label2.Click += label2_Click;
             // 
             // dataGridViewBuildings
             // 
@@ -61,16 +62,16 @@
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(1094, 330);
+            dataGridViewBuildings.Size = new Size(1125, 330);
             dataGridViewBuildings.TabIndex = 6;
             // 
             // button1
             // 
             button1.BackColor = Color.Black;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(505, 428);
+            button1.Location = new Point(505, 437);
             button1.Name = "button1";
-            button1.Size = new Size(144, 52);
+            button1.Size = new Size(174, 50);
             button1.TabIndex = 10;
             button1.Text = "Display";
             button1.UseVisualStyleBackColor = false;
@@ -89,7 +90,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(852, 417);
+            pictureBox1.Location = new Point(893, 437);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(271, 186);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -100,7 +101,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(29, 417);
+            pictureBox2.Location = new Point(29, 437);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(271, 186);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -109,7 +110,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(912, 18);
+            textBox1.Location = new Point(965, 25);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search Room";
@@ -121,7 +122,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1090, 18);
+            pictureBox3.Location = new Point(1143, 25);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(21, 31);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -134,7 +135,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1146, 599);
+            ClientSize = new Size(1188, 635);
             Controls.Add(pictureBox3);
             Controls.Add(textBox1);
             Controls.Add(pictureBox2);

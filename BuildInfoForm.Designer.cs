@@ -44,7 +44,7 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(382, 74);
+            dataGridViewBuildings.Location = new Point(463, 95);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
@@ -66,7 +66,7 @@
             button2.BackColor = Color.Black;
             button2.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(65, 320);
+            button2.Location = new Point(77, 346);
             button2.Name = "button2";
             button2.Size = new Size(271, 60);
             button2.TabIndex = 26;
@@ -79,7 +79,7 @@
             button3.BackColor = Color.Black;
             button3.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(90, 396);
+            button3.Location = new Point(102, 422);
             button3.Name = "button3";
             button3.Size = new Size(222, 60);
             button3.TabIndex = 27;
@@ -90,9 +90,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(65, 108);
+            pictureBox1.Location = new Point(67, 109);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(271, 197);
+            pictureBox1.Size = new Size(308, 231);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
@@ -101,7 +101,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18.2686558F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(497, 6);
+            label2.Location = new Point(578, 27);
             label2.Name = "label2";
             label2.Size = new Size(392, 40);
             label2.TabIndex = 29;
@@ -111,9 +111,9 @@
             // 
             button4.BackColor = Color.Black;
             button4.ForeColor = Color.White;
-            button4.Location = new Point(609, 496);
+            button4.Location = new Point(687, 517);
             button4.Name = "button4";
-            button4.Size = new Size(235, 51);
+            button4.Size = new Size(238, 51);
             button4.TabIndex = 38;
             button4.Text = "Refresh";
             button4.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1085, 577);
+            ClientSize = new Size(1171, 631);
             Controls.Add(button4);
             Controls.Add(label2);
             Controls.Add(pictureBox1);

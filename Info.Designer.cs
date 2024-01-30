@@ -43,7 +43,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18.2686558F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(691, 32);
+            label2.Location = new Point(756, 50);
             label2.Name = "label2";
             label2.Size = new Size(331, 40);
             label2.TabIndex = 37;
@@ -53,19 +53,19 @@
             // 
             dataGridViewBuildings.BackgroundColor = Color.GhostWhite;
             dataGridViewBuildings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBuildings.Location = new Point(616, 87);
+            dataGridViewBuildings.Location = new Point(671, 105);
             dataGridViewBuildings.Name = "dataGridViewBuildings";
             dataGridViewBuildings.RowHeadersWidth = 57;
             dataGridViewBuildings.RowTemplate.Height = 32;
-            dataGridViewBuildings.Size = new Size(469, 404);
+            dataGridViewBuildings.Size = new Size(481, 414);
             dataGridViewBuildings.TabIndex = 38;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(107, 32);
+            pictureBox1.Location = new Point(104, 50);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(344, 283);
+            pictureBox1.Size = new Size(376, 313);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
@@ -75,9 +75,9 @@
             button3.BackColor = Color.Black;
             button3.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(198, 414);
+            button3.Location = new Point(198, 459);
             button3.Name = "button3";
-            button3.Size = new Size(167, 60);
+            button3.Size = new Size(186, 60);
             button3.TabIndex = 40;
             button3.Text = "Delete Account";
             button3.UseVisualStyleBackColor = false;
@@ -88,9 +88,9 @@
             button2.BackColor = Color.Black;
             button2.Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(173, 339);
+            button2.Location = new Point(168, 386);
             button2.Name = "button2";
-            button2.Size = new Size(222, 60);
+            button2.Size = new Size(243, 60);
             button2.TabIndex = 39;
             button2.Text = "Add Account";
             button2.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1127, 578);
+            ClientSize = new Size(1213, 618);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
