@@ -37,9 +37,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(987, 499);
+            pictureBox1.Location = new Point(956, 509);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(232, 151);
+            pictureBox1.Size = new Size(228, 154);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 58;
             pictureBox1.TabStop = false;
@@ -48,7 +48,7 @@
             // 
             button3.Location = new Point(12, 12);
             button3.Name = "button3";
-            button3.Size = new Size(40, 27);
+            button3.Size = new Size(44, 28);
             button3.TabIndex = 59;
             button3.Text = ">";
             button3.UseVisualStyleBackColor = true;
@@ -56,13 +56,13 @@
             // 
             // Settings
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1222, 653);
+            ClientSize = new Size(1182, 663);
             Controls.Add(button3);
             Controls.Add(pictureBox1);
-            Font = new Font("Century Gothic", 9.134328F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Century Gothic", 10.2089548F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Settings";
             Text = "Settings";
