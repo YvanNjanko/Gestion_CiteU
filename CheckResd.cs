@@ -86,7 +86,7 @@ namespace FrontEnd_Gestion_CiteU
                 connection.Open();
 
                 // Sélectionner les données des résidents depuis la table Resident
-                string query = "SELECT MatriculeEtudiant, CodeChambre, NbreMoisLocation FROM Resident";
+                string query = "SELECT MatriculeEtudiant, CodeChambre, NbreMoisLocation, numMois FROM Resident";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
                 // Utiliser un adaptateur de données pour remplir un DataSet

@@ -173,6 +173,9 @@ namespace FrontEnd_Gestion_CiteU
                     {
                         // Chambre trouvée, demander le nombre de mois de location
                         int nombreMoisLocation;
+
+                        string numMois = Interaction.InputBox("Entrez le numero du mois d'entree:");
+
                         if (int.TryParse(Interaction.InputBox("Entrez le nombre de mois de location:", "Ajouter un étudiant", ""), out nombreMoisLocation))
                         {
                             // Vérifier le nombre de lits occupés de la chambre
@@ -206,14 +209,14 @@ namespace FrontEnd_Gestion_CiteU
                                         if (numeroEtage == 0)
                                         {
                                             // Chambre vide, ajouter le résident à la table Resident
-                                            AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
+                                            AddResidentToChambre(matricule, codeChambre, nombreMoisLocation, numMois);
 
                                             MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
 
                                             // Mettre à jour le nombre de lits occupés dans la table Chambre
                                             UpdateLitsOccupes(codeChambre);
 
-                                            AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                            AddPaie(matricule, codeChambre, nombreMoisLocation, numMois);
                                             MessageBox.Show("Paiment introduit.");
                                         }
                                         else
@@ -224,14 +227,14 @@ namespace FrontEnd_Gestion_CiteU
                                     else
                                     {
                                         // Chambre vide, ajouter le résident à la table Resident
-                                        AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
+                                        AddResidentToChambre(matricule, codeChambre, nombreMoisLocation, numMois);
 
                                         MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
 
                                         // Mettre à jour le nombre de lits occupés dans la table Chambre
                                         UpdateLitsOccupes(codeChambre);
 
-                                        AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                        AddPaie(matricule, codeChambre, nombreMoisLocation, numMois);
                                         MessageBox.Show("Paiment introduit.");
                                     }
                                 }
@@ -292,14 +295,14 @@ namespace FrontEnd_Gestion_CiteU
                                                 if (numeroEtage == 0)
                                                 {
                                                     // Chambre vide, ajouter le résident à la table Resident
-                                                    AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
+                                                    AddResidentToChambre(matricule, codeChambre, nombreMoisLocation, numMois);
 
                                                     MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
 
                                                     // Mettre à jour le nombre de lits occupés dans la table Chambre
                                                     UpdateLitsOccupes(codeChambre);
 
-                                                    AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                                    AddPaie(matricule, codeChambre, nombreMoisLocation, numMois);
                                                     MessageBox.Show("Paiment introduit.");
                                                 }
                                                 else
@@ -310,13 +313,13 @@ namespace FrontEnd_Gestion_CiteU
                                             else
                                             {
                                                 // Chambre vide, ajouter le résident à la table Resident
-                                                AddResidentToChambre(matricule, codeChambre, nombreMoisLocation);
+                                                AddResidentToChambre(matricule, codeChambre, nombreMoisLocation, numMois);
                                                 MessageBox.Show("Étudiant ajouté en tant que résident avec succès.");
 
                                                 // Mettre à jour le nombre de lits occupés dans la table Chambre
                                                 UpdateLitsOccupes(codeChambre);
 
-                                                AddPaie(matricule, codeChambre, nombreMoisLocation);
+                                                AddPaie(matricule, codeChambre, nombreMoisLocation, numMois);
                                                 MessageBox.Show("Paiment introduit.");
                                             }
                                         }
@@ -363,19 +366,20 @@ namespace FrontEnd_Gestion_CiteU
             }
         }
 
-        private void AddResidentToChambre(string matricule, string codeChambre, int nombreMoisLocation)
+        private void AddResidentToChambre(string matricule, string codeChambre, int nombreMoisLocation, string numMois)
         {
             // Ajouter le résident à la table Resident
-            string addResidentQuery = "INSERT INTO Resident (MatriculeEtudiant, CodeChambre, NbreMoisLocation) VALUES (@matricule, @codeChambre, @nombreMoisLocation)";
+            string addResidentQuery = "INSERT INTO Resident (MatriculeEtudiant, CodeChambre, NbreMoisLocation,numMois) VALUES (@matricule, @codeChambre, @nombreMoisLocation,@numMois)";
             MySqlCommand addResidentCmd = new MySqlCommand(addResidentQuery, connection);
             addResidentCmd.Parameters.AddWithValue("@matricule", matricule);
             addResidentCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
             addResidentCmd.Parameters.AddWithValue("@nombreMoisLocation", nombreMoisLocation);
+            addResidentCmd.Parameters.AddWithValue("@numMois", numMois);
 
             addResidentCmd.ExecuteNonQuery();
         }
 
-        private void AddPaie(string matricule, string codeChambre, int nombreMoisLocation)
+        private void AddPaie(string matricule, string codeChambre, int nombreMoisLocation, string numMois)
         {
             bool statu = false;
 
@@ -388,13 +392,14 @@ namespace FrontEnd_Gestion_CiteU
             int prixChambre = Convert.ToInt32(getPrixChambreCmd.ExecuteScalar());
 
             // Ajouter les informations de paiement à la table paiement
-            string addPaymentQuery = "INSERT INTO paiment (MatriculeEtudiant, CodeChambre, NbreMoisLocation, PrixChambre, statu) VALUES (@matricule, @codeChambre, @nombreMoisLocation, @prixChambre, @statu)";
+            string addPaymentQuery = "INSERT INTO paiment (MatriculeEtudiant, CodeChambre, NbreMoisLocation, PrixChambre, statu,numMois) VALUES (@matricule, @codeChambre, @nombreMoisLocation, @prixChambre, @statu, @numMois)";
             MySqlCommand addPaymentCmd = new MySqlCommand(addPaymentQuery, connection);
             addPaymentCmd.Parameters.AddWithValue("@matricule", matricule);
             addPaymentCmd.Parameters.AddWithValue("@codeChambre", codeChambre);
             addPaymentCmd.Parameters.AddWithValue("@nombreMoisLocation", nombreMoisLocation);
             addPaymentCmd.Parameters.AddWithValue("@prixChambre", prixChambre);
             addPaymentCmd.Parameters.AddWithValue("@statu", statu);
+            addPaymentCmd.Parameters.AddWithValue("@numMois", numMois);
 
             // Exécuter la commande pour ajouter le paiement
             addPaymentCmd.ExecuteNonQuery();
